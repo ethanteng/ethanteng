@@ -18,16 +18,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="mb-4">
+            <div className="mb-6">
               <Image
                 src="/Ethan Teng Consulting logo.png"
                 alt="Ethan Teng Consulting"
-                width={180}
-                height={40}
-                className="h-10 w-auto invert dark:invert-0"
+                width={280}
+                height={64}
+                className="h-16 w-auto invert dark:invert-0"
               />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground max-w-xs">
               Turn traction into self-serve revenue.
             </p>
           </div>

@@ -39,16 +39,13 @@ export function Navbar() {
     >
       <nav className="container mx-auto px-4 max-w-7xl">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <div className="relative h-10 w-auto">
-              <Image
-                src="/Ethan Teng Consulting logo.png"
-                alt="Ethan Teng Consulting"
-                width={180}
-                height={40}
-                className="h-10 w-auto invert dark:invert-0"
-                priority
-              />
+          <Link href="/" className="flex items-center space-x-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-accent to-purple-600 text-primary-foreground font-bold text-xl shadow-lg hover:shadow-xl transition-shadow">
+              ET
+            </div>
+            <div className="hidden sm:block">
+              <div className="text-lg font-bold leading-tight">Ethan Teng</div>
+              <div className="text-xs text-muted-foreground uppercase tracking-wider">Consulting</div>
             </div>
           </Link>
 
@@ -82,15 +79,15 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="mb-8">
-                <Image
-                  src="/Ethan Teng Consulting logo.png"
-                  alt="Ethan Teng Consulting"
-                  width={160}
-                  height={36}
-                  className="h-9 w-auto invert dark:invert-0"
-                />
-              </div>
+              <Link href="/" className="flex items-center space-x-3 mb-8">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-accent to-purple-600 text-primary-foreground font-bold text-xl shadow-lg">
+                  ET
+                </div>
+                <div>
+                  <div className="text-lg font-bold leading-tight">Ethan Teng</div>
+                  <div className="text-xs text-muted-foreground uppercase tracking-wider">Consulting</div>
+                </div>
+              </Link>
               <nav className="flex flex-col space-y-4">
                 {navigation.map((item) => (
                   <Link
