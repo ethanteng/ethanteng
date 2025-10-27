@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Section } from "@/components/section";
-import { ContactForm } from "@/components/contact-form";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, Linkedin, Clock } from "lucide-react";
@@ -109,9 +109,21 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact Form */}
+            {/* Calendly Embed */}
             <div className="lg:col-span-2">
-              <ContactForm />
+              <Card>
+                <CardContent className="p-0">
+                  <div 
+                    className="calendly-inline-widget" 
+                    data-url="https://calendly.com/ethanteng-sf/plg?hide_event_type_details=1&hide_gdpr_banner=1" 
+                    style={{ minWidth: '320px', height: '700px' }}
+                  />
+                </CardContent>
+              </Card>
+              <Script 
+                src="https://assets.calendly.com/assets/external/widget.js" 
+                strategy="lazyOnload"
+              />
             </div>
           </div>
         </div>
