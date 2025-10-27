@@ -29,15 +29,16 @@ export function FeatureCard({ title, description, icon: Icon }: FeatureCardProps
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
+      whileHover={{ y: -8, transition: { duration: 0.2 } }}
     >
-      <Card className="h-full hover:shadow-lg transition-all hover:border-primary/30 group">
+      <Card className="h-full hover:shadow-xl transition-all hover:border-primary/70 group">
         <CardHeader>
           {Icon && (
-            <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${gradientClass} flex items-center justify-center mb-4 shadow-sm`}>
+            <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${gradientClass} flex items-center justify-center mb-4 shadow-sm group-hover:shadow-md group-hover:scale-110 transition-all duration-200`}>
               <Icon className="w-6 h-6 text-white" />
             </div>
           )}
-          <CardTitle className="text-xl">{title}</CardTitle>
+          <CardTitle className="text-xl group-hover:text-primary transition-colors">{title}</CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription className="text-base">{description}</CardDescription>
