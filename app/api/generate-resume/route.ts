@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const pdfBuffer = await renderToBuffer(React.createElement(ResumePDF));
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer), {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="Ethan_Teng_Resume.pdf"',
