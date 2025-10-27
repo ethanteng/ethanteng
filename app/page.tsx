@@ -91,23 +91,14 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {HIGHLIGHTS.map((highlight, index) => {
-            // Parse highlight into metric parts
-            const parts = highlight.split(/[:–]/);
-            const label = parts[0].trim();
-            const valueContext = parts[1]?.trim() || highlight;
-            const [value, ...contextParts] = valueContext.split(/\(|\s(?=in|within|from|to\s)/);
-            const context = contextParts.join(" ").replace(/[()]/g, "");
-
-            return (
-              <MetricCard
-                key={index}
-                label={label}
-                value={value.trim()}
-                context={context}
-              />
-            );
-          })}
+          {HIGHLIGHTS.map((highlight, index) => (
+            <MetricCard
+              key={index}
+              label={highlight.label}
+              value={highlight.metric}
+              context={highlight.context}
+            />
+          ))}
         </div>
       </Section>
 

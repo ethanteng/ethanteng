@@ -62,12 +62,36 @@ export const ADHOC = {
 };
 
 export const HIGHLIGHTS = [
-  '$0 → $1M+ self-serve ARR (under 2 years)',
-  'Activation 50% & PQL 30% within 7 days',
-  'Time-to-value: 30 days → < 1 day',
-  'Churn cut from 30% to <5% in key cohorts',
-  'Postman: helped PLG revenue +50%, crossed $100M self-serve ARR',
-  'Braintree/PayPal: launched ACH into $43T market'
+  {
+    metric: '$0 → $1M+',
+    label: 'Self-serve ARR',
+    context: 'Under 2 years'
+  },
+  {
+    metric: '50%',
+    label: 'Activation rate',
+    context: 'Within 7 days'
+  },
+  {
+    metric: '<1 day',
+    label: 'Time-to-value',
+    context: 'Down from 30 days'
+  },
+  {
+    metric: '<5%',
+    label: 'Churn rate',
+    context: 'In key cohorts'
+  },
+  {
+    metric: '$100M+',
+    label: 'Self-serve ARR',
+    context: 'Postman milestone'
+  },
+  {
+    metric: '+50%',
+    label: 'PLG revenue growth',
+    context: 'Year-over-year'
+  }
 ];
 
 export const WHAT_I_DO_BEST = [
