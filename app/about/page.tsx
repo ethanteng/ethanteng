@@ -25,7 +25,7 @@ export default function AboutPage() {
           <div className="flex items-center gap-6 mb-12">
             <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-white/20 shrink-0 shadow-lg">
               <Image
-                src="/Ethan.jpg"
+                src="/Ethan.JPG"
                 alt="Ethan Teng"
                 fill
                 className="object-cover"
