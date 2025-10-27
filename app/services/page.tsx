@@ -74,28 +74,28 @@ export default function ServicesPage() {
         </div>
 
         {/* Additional Options & Add-ons */}
-        <div className="max-w-6xl mx-auto mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Equity-Based */}
             <Card className="bg-muted/50">
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-3">
+              <CardContent className="p-4">
+                <div className="flex items-start justify-between mb-2">
                   <div>
-                    <h3 className="text-xl font-bold mb-2">
+                    <h3 className="text-lg font-bold mb-1.5">
                       Equity-based engagements
                     </h3>
-                    <Badge variant="outline" className="mb-3">
+                    <Badge variant="outline" className="mb-2 text-xs">
                       Limited availability
                     </Badge>
                   </div>
-                  <span className="text-xl font-bold text-primary">Custom</span>
+                  <span className="text-lg font-bold text-primary">Custom</span>
                 </div>
-                <p className="text-muted-foreground text-sm mb-3">
+                <p className="text-muted-foreground text-xs mb-2 leading-relaxed">
                   I take on one equity client at a time, typically mirroring the
                   Build-out or Fractional engagement structure. Requires strong
                   founder fit and clear value exchange.
                 </p>
-                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded p-2">
                   <p className="text-xs text-yellow-800 dark:text-yellow-200">
                     <strong>June 2025 update:</strong> Not taking new equity clients
                     at this time.
@@ -106,34 +106,34 @@ export default function ServicesPage() {
 
             {/* Ad-hoc */}
             <Card className="bg-muted/50">
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between mb-3">
+              <CardContent className="p-4">
+                <div className="flex items-start justify-between mb-2">
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Ad-hoc consulting</h3>
-                    <Badge variant="outline" className="mb-3">
+                    <h3 className="text-lg font-bold mb-1.5">Ad-hoc consulting</h3>
+                    <Badge variant="outline" className="mb-2 text-xs">
                       Limited spots
                     </Badge>
                   </div>
-                  <span className="text-xl font-bold text-primary">
+                  <span className="text-lg font-bold text-primary">
                     {ADHOC.rate}
                   </span>
                 </div>
-                <p className="text-muted-foreground text-sm">{ADHOC.note}</p>
+                <p className="text-muted-foreground text-xs leading-relaxed">{ADHOC.note}</p>
               </CardContent>
             </Card>
 
             {/* Add-ons */}
             <Card className="bg-muted/50">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Add-ons</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+              <CardContent className="p-4">
+                <h3 className="text-lg font-bold mb-2">Add-ons</h3>
+                <p className="text-muted-foreground text-xs mb-2">
                   Enhance any engagement:
                 </p>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   {ADDONS.map((addon, index) => (
                     <div key={index} className="flex items-start space-x-2">
-                      <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm">{addon}</span>
+                      <Check className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-xs leading-relaxed">{addon}</span>
                     </div>
                   ))}
                 </div>
