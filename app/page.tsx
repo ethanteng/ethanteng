@@ -73,7 +73,7 @@ export default function HomePage() {
             {credibilityChips.map((chip, index) => (
               <span
                 key={index}
-                className="text-xs px-3 py-1.5 text-gray-400 border-none bg-transparent"
+                className="text-sm md:text-base px-3 py-1.5 text-gray-400"
               >
                 {chip}
               </span>
