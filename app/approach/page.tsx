@@ -3,6 +3,7 @@ import { Section } from "@/components/section";
 import { FeatureCard } from "@/components/feature-card";
 import { Badge } from "@/components/ui/badge";
 import { APPROACH_PRINCIPLES } from "@/lib/site";
+import { Search, Pencil, Hammer, TrendingUp } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Approach",
@@ -93,36 +94,64 @@ export default function ApproachPage() {
             How we'll work together
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-muted/30 rounded-2xl p-6">
-              <h3 className="text-lg font-bold mb-3">Start with diagnosis</h3>
-              <p className="text-sm text-muted-foreground">
-                I'll dig into your data, talk to your team, and identify the
-                highest-leverage opportunities. No cookie-cutter playbooks—every
-                business is different.
-              </p>
+            <div className="bg-muted/30 rounded-2xl p-6 hover:bg-muted/50 transition-colors group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 shadow-sm shrink-0 group-hover:shadow-md group-hover:scale-105 transition-all duration-200">
+                  <Search className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-3">Start with diagnosis</h3>
+                  <p className="text-sm text-muted-foreground">
+                    I'll dig into your data, talk to your team, and identify the
+                    highest-leverage opportunities. No cookie-cutter playbooks—every
+                    business is different.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-muted/30 rounded-2xl p-6">
-              <h3 className="text-lg font-bold mb-3">Design with intent</h3>
-              <p className="text-sm text-muted-foreground">
-                Whether it's onboarding flows, lifecycle campaigns, or
-                dashboards, everything is designed to shorten time-to-value and
-                increase conversion.
-              </p>
+            <div className="bg-muted/30 rounded-2xl p-6 hover:bg-muted/50 transition-colors group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 shadow-sm shrink-0 group-hover:shadow-md group-hover:scale-105 transition-all duration-200">
+                  <Pencil className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-3">Design with intent</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Whether it's onboarding flows, lifecycle campaigns, or
+                    dashboards, everything is designed to shorten time-to-value and
+                    increase conversion.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-muted/30 rounded-2xl p-6">
-              <h3 className="text-lg font-bold mb-3">Build hands-on</h3>
-              <p className="text-sm text-muted-foreground">
-                I don't just advise—I ship. Whether it's setting up Intercom
-                campaigns, building Segment flows, or creating Sigma dashboards,
-                I'm in the tools with you.
-              </p>
+            <div className="bg-muted/30 rounded-2xl p-6 hover:bg-muted/50 transition-colors group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 shadow-sm shrink-0 group-hover:shadow-md group-hover:scale-105 transition-all duration-200">
+                  <Hammer className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-3">Build hands-on</h3>
+                  <p className="text-sm text-muted-foreground">
+                    I don't just advise—I ship. Whether it's setting up Intercom
+                    campaigns, building Segment flows, or creating Sigma dashboards,
+                    I'm in the tools with you.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="bg-muted/30 rounded-2xl p-6">
-              <h3 className="text-lg font-bold mb-3">Measure and iterate</h3>
-              <p className="text-sm text-muted-foreground">
-                We'll set clear success metrics, track them rigorously, and run
-                tight experiment loops to continuously improve results.
-              </p>
+            <div className="bg-muted/30 rounded-2xl p-6 hover:bg-muted/50 transition-colors group">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 shadow-sm shrink-0 group-hover:shadow-md group-hover:scale-105 transition-all duration-200">
+                  <TrendingUp className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-3">Measure and iterate</h3>
+                  <p className="text-sm text-muted-foreground">
+                    We'll set clear success metrics, track them rigorously, and run
+                    tight experiment loops to continuously improve results.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
