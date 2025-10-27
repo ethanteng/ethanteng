@@ -1,65 +1,214 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Section } from "@/components/section";
+import { MetricCard } from "@/components/metric-card";
+import { FeatureCard } from "@/components/feature-card";
+import { ExperienceCard } from "@/components/experience-card";
+import { PriceCard } from "@/components/price-card";
+import { ArrowRight, Zap, TrendingUp, Cog } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { HIGHLIGHTS, WHAT_I_DO_BEST, EXPERIENCE, OFFERS } from "@/lib/site";
+
+const credibilityChips = [
+  "Onboarding & activation that converts",
+  "Funnel diagnostics",
+  "Growth systems that scale",
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero Section */}
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-[#0B0F1A] to-background text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight">
+              Turn traction into{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                self-serve revenue
+              </span>
+            </h1>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            I help early-stage SaaS teams convert more signups, shorten
+            time-to-value, and build a growth engine that scales.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          >
+            <Button asChild size="lg" className="text-base">
+              <Link href="/contact">
+                Book a consult <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-base bg-white/10 hover:bg-white/20 text-white border-white/20">
+              <Link href="/services">See services</Link>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap items-center justify-center gap-3"
+          >
+            {credibilityChips.map((chip, index) => (
+              <Badge
+                key={index}
+                variant="secondary"
+                className="text-sm px-4 py-2 bg-white/10 text-white border-white/20"
+              >
+                {chip}
+              </Badge>
+            ))}
+          </motion.div>
+        </div>
+      </Section>
+
+      {/* Proof Strip */}
+      <Section className="bg-muted/30">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Proven Results</h2>
+          <p className="text-muted-foreground">
+            Real metrics from real companies
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {HIGHLIGHTS.map((highlight, index) => {
+            // Parse highlight into metric parts
+            const parts = highlight.split(/[:–]/);
+            const label = parts[0].trim();
+            const valueContext = parts[1]?.trim() || highlight;
+            const [value, ...contextParts] = valueContext.split(/\(|\s(?=in|within|from|to\s)/);
+            const context = contextParts.join(" ").replace(/[()]/g, "");
+
+            return (
+              <MetricCard
+                key={index}
+                label={label}
+                value={value.trim()}
+                context={context}
+              />
+            );
+          })}
         </div>
-      </main>
-    </div>
+      </Section>
+
+      {/* What I Do Best */}
+      <Section>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What I do best
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Focused expertise in the areas that move the needle for PLG companies
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <FeatureCard
+            title={WHAT_I_DO_BEST[0].title}
+            description={WHAT_I_DO_BEST[0].description}
+            icon={Zap}
+          />
+          <FeatureCard
+            title={WHAT_I_DO_BEST[1].title}
+            description={WHAT_I_DO_BEST[1].description}
+            icon={TrendingUp}
+          />
+          <FeatureCard
+            title={WHAT_I_DO_BEST[2].title}
+            description={WHAT_I_DO_BEST[2].description}
+            icon={Cog}
+          />
+        </div>
+      </Section>
+
+      {/* Featured Experience */}
+      <Section className="bg-muted/30">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Featured Experience
+          </h2>
+          <p className="text-muted-foreground">
+            Track record across high-growth SaaS companies
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {EXPERIENCE.map((exp, index) => (
+            <ExperienceCard key={index} {...exp} />
+          ))}
+        </div>
+      </Section>
+
+      {/* Offer Preview */}
+      <Section>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            How I can help
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Choose the engagement model that fits your needs and stage
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {OFFERS.map((offer, index) => (
+            <PriceCard
+              key={offer.id}
+              {...offer}
+              featured={index === 1}
+            />
+          ))}
+        </div>
+        <div className="text-center mt-12">
+          <Button asChild size="lg" variant="outline">
+            <Link href="/services">
+              View all services & pricing <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </Section>
+
+      {/* CTA Section */}
+      <Section className="bg-gradient-to-b from-background to-[#0B0F1A] text-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              Let's design a self-serve motion that prints revenue
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Book a free 30-minute call to discuss your growth challenges and
+              explore how I can help.
+            </p>
+            <Button asChild size="lg" className="text-base">
+              <Link href="/contact">
+                Get in touch <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </Section>
+    </>
   );
 }
