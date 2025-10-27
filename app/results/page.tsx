@@ -7,6 +7,7 @@ import { CASE_STUDIES } from "@/lib/site";
 import { Building2, ExternalLink, BarChart3, Zap, Users, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -20,6 +21,13 @@ export const metadata: Metadata = {
   title: "Results & Case Studies",
   description:
     "$0 → $1M+ self-serve ARR at meez, crossed $100M at Postman, launched ACH at Braintree/PayPal. Real metrics from real companies.",
+};
+
+// Map case study IDs to their logo assets
+const companyLogos: Record<string, { src: string; alt: string }> = {
+  meez: { src: "/meez.png", alt: "meez logo" },
+  postman: { src: "/postman.jpg", alt: "Postman logo" },
+  braintree: { src: "/braintree.svg", alt: "Braintree logo" },
 };
 
 export default function ResultsPage() {
@@ -50,9 +58,21 @@ export default function ResultsPage() {
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Building2 className="w-6 h-6 text-primary" />
-                    </div>
+                    {companyLogos[caseStudy.id] ? (
+                      <div className="w-24 h-24 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0">
+                        <Image
+                          src={companyLogos[caseStudy.id].src}
+                          alt={companyLogos[caseStudy.id].alt}
+                          width={96}
+                          height={96}
+                          className="object-contain w-full h-full p-2"
+                        />
+                      </div>
+                    ) : (
+                      <div className="w-24 h-24 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Building2 className="w-12 h-12 text-primary" />
+                      </div>
+                    )}
                     <div>
                       <CardTitle className="text-3xl">{caseStudy.company}</CardTitle>
                       <p className="text-muted-foreground">{caseStudy.title}</p>
