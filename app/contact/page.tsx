@@ -3,7 +3,7 @@ import Script from "next/script";
 import { Section } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, Linkedin, Clock } from "lucide-react";
+import { Mail, Linkedin, Clock } from "lucide-react";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -32,81 +32,57 @@ export default function ContactPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info */}
-            <div className="space-y-6">
-              <Card className="hover:border-blue-500/30 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0">
-                      <Mail className="h-5 w-5 text-white" />
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-xl font-bold mb-6">Other ways to connect</h2>
+                  <div className="space-y-6">
+                    {/* Email */}
+                    <div className="flex items-start space-x-3 group">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
+                        <Mail className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex-1 pt-1">
+                        <h3 className="text-sm font-medium text-muted-foreground mb-1">Email</h3>
+                        <a
+                          href={`mailto:${SITE.email}`}
+                          className="text-base font-semibold text-foreground hover:text-primary transition-colors"
+                        >
+                          {SITE.email}
+                        </a>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <a
-                        href={`mailto:${SITE.email}`}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {SITE.email}
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
 
-              <Card className="hover:border-green-500/30 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shrink-0">
-                      <Phone className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Phone</h3>
-                      <a
-                        href={`tel:${SITE.phone.replace(/[^0-9]/g, "")}`}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        {SITE.phone}
-                      </a>
+                    {/* LinkedIn */}
+                    <div className="flex items-start space-x-3 group">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
+                        <Linkedin className="h-6 w-6 text-white" />
+                      </div>
+                      <div className="flex-1 pt-1">
+                        <h3 className="text-sm font-medium text-muted-foreground mb-1">LinkedIn</h3>
+                        <a
+                          href={SITE.social.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-base font-semibold text-foreground hover:text-primary transition-colors"
+                        >
+                          Connect with me →
+                        </a>
+                      </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
 
-              <Card className="hover:border-blue-600/30 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shrink-0">
-                      <Linkedin className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">LinkedIn</h3>
-                      <a
-                        href={SITE.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Connect with me
-                      </a>
-                    </div>
+                {/* Response Time Note */}
+                <div className="pt-6 border-t">
+                  <div className="flex items-center space-x-2 text-muted-foreground">
+                    <Clock className="h-4 w-4" />
+                    <p className="text-sm">
+                      I typically respond within 24 hours
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:border-purple-500/30 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shrink-0">
-                      <Clock className="h-5 w-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Response time</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Within 24 hours
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
 
             {/* Calendly Embed */}
