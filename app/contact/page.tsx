@@ -84,7 +84,7 @@ export default function ContactPage() {
             </div>
 
             {/* Calendly Embed */}
-            <div className="lg:col-span-2 -mt-2">
+            <div className="lg:col-span-2 -mt-6">
               <div 
                 className="calendly-inline-widget" 
                 data-url="https://calendly.com/ethanteng-sf/plg?hide_event_type_details=1&hide_gdpr_banner=1" 
