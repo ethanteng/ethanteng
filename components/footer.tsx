@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, Linkedin } from "lucide-react";
 import { SITE } from "@/lib/site";
 
@@ -17,11 +18,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-lg shadow-sm">
-                ET
-              </div>
-              <span className="font-semibold text-lg">{SITE.name}</span>
+            <div className="mb-4">
+              <Image
+                src="/Ethan Teng Consulting logo.png"
+                alt="Ethan Teng Consulting"
+                width={180}
+                height={40}
+                className="h-10 w-auto invert dark:invert-0"
+              />
             </div>
             <p className="text-sm text-muted-foreground">
               Turn traction into self-serve revenue.

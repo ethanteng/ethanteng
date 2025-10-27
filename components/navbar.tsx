@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -38,9 +39,16 @@ export function Navbar() {
     >
       <nav className="container mx-auto px-4 max-w-7xl">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-primary-foreground font-bold text-lg shadow-sm">
-              ET
+          <Link href="/" className="flex items-center">
+            <div className="relative h-10 w-auto">
+              <Image
+                src="/Ethan Teng Consulting logo.png"
+                alt="Ethan Teng Consulting"
+                width={180}
+                height={40}
+                className="h-10 w-auto invert dark:invert-0"
+                priority
+              />
             </div>
           </Link>
 
@@ -74,7 +82,16 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <nav className="flex flex-col space-y-4 mt-8">
+              <div className="mb-8">
+                <Image
+                  src="/Ethan Teng Consulting logo.png"
+                  alt="Ethan Teng Consulting"
+                  width={160}
+                  height={36}
+                  className="h-9 w-auto invert dark:invert-0"
+                />
+              </div>
+              <nav className="flex flex-col space-y-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
