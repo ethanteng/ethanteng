@@ -3,12 +3,6 @@ import { Section } from "@/components/section";
 import { PriceCard } from "@/components/price-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { OFFERS, ADDONS, ADHOC } from "@/lib/site";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
@@ -144,31 +138,27 @@ export default function ServicesPage() {
       </Section>
 
       {/* What to Expect */}
-      <Section>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
+      <Section className="bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center">
             What to expect
           </h2>
-          <p className="text-muted-foreground text-center mb-12">
+          <p className="text-muted-foreground text-center mb-8">
             A structured approach to delivering results
           </p>
-          <Accordion type="single" collapsible className="w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {processSteps.map((step, index) => (
-              <AccordionItem key={index} value={`step-${index}`}>
-                <AccordionTrigger className="text-lg font-semibold">
-                  <div className="flex items-center space-x-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
-                      {index + 1}
-                    </div>
-                    <span>{step.title}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pl-11">
+              <div key={index} className="flex flex-col items-center text-center">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold mb-3 shadow-sm">
+                  {index + 1}
+                </div>
+                <h3 className="font-semibold mb-1.5 text-base">{step.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   {step.description}
-                </AccordionContent>
-              </AccordionItem>
+                </p>
+              </div>
             ))}
-          </Accordion>
+          </div>
         </div>
       </Section>
 
