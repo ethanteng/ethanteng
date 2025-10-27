@@ -57,45 +57,43 @@ export default function AboutPage() {
                     self-serve revenue engines that scale.
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="space-y-4">
                     {/* Current Work - Highlighted Box */}
-                    <div className="p-6 rounded-lg bg-primary/5 border border-primary/10 flex flex-col">
+                    <div className="p-6 rounded-lg bg-primary/5 border border-primary/10">
                       <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
                         Current
                       </h3>
-                      <p className="text-base text-foreground leading-relaxed">
+                      <p className="text-base md:text-lg text-foreground leading-relaxed">
                         Founding <span className="font-semibold">Ask Linc</span>, 
                         building AI tools to help product teams move faster.
                       </p>
                     </div>
 
                     {/* Previous Work - Box with Logos */}
-                    <div className="p-6 rounded-lg bg-muted/50 border border-border/50 flex flex-col">
+                    <div className="p-6 rounded-lg bg-muted/50 border border-border/50">
                       <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
                         Previously
                       </h3>
-                      <div className="flex-1 flex flex-col">
-                        <p className="text-base text-muted-foreground leading-relaxed mb-4 flex-1">
-                          VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
-                          at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
-                        </p>
-                        {/* Company Logos */}
-                        <div className="flex flex-wrap items-center gap-4 mt-auto">
-                          <Image src="/meez.png" alt="meez" width={60} height={24} className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                          <Image src="/postman.jpg" alt="Postman" width={85} height={24} className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                          <Image src="/braintree.svg" alt="Braintree" width={85} height={24} className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                          <Image src="/recurly.svg" alt="Recurly" width={70} height={24} className="h-6 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        </div>
+                      <p className="text-base text-muted-foreground leading-relaxed mb-4">
+                        VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
+                        at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
+                      </p>
+                      {/* Company Logos */}
+                      <div className="flex flex-wrap items-center gap-6">
+                        <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
 
                     {/* Education - Box with Stanford Logo */}
-                    <div className="p-6 rounded-lg bg-gradient-to-br from-card to-muted/30 border border-border/50 flex flex-col">
+                    <div className="p-6 rounded-lg bg-gradient-to-br from-card to-muted/30 border border-border/50">
                       <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-3">
                         Education
                       </h3>
-                      <div className="flex items-start gap-3 flex-1">
-                        <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/30">
+                      <div className="flex items-center gap-4">
+                        <div className="relative w-16 h-16 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/30">
                           <Image 
                             src="/stanford.jpg" 
                             alt="Stanford University" 
