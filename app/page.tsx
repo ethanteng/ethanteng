@@ -22,8 +22,9 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-[#0B0F1A] to-background text-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-[#0B0F1A] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -58,7 +59,7 @@ export default function HomePage() {
                 Book a consult <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-base bg-white/10 hover:bg-white/20 text-white border-white/20">
+            <Button asChild size="lg" variant="outline" className="text-base bg-white/20 hover:bg-white/30 text-white border-white/40 backdrop-blur-sm">
               <Link href="/services">See services</Link>
             </Button>
           </motion.div>
@@ -73,7 +74,7 @@ export default function HomePage() {
               <Badge
                 key={index}
                 variant="secondary"
-                className="text-sm px-4 py-2 bg-white/10 text-white border-white/20"
+                className="text-sm px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
               >
                 {chip}
               </Badge>
