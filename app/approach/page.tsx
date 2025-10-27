@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ApproachPage() {
   return (
     <>
-      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-purple-600 via-pink-600 to-rose-600 text-white relative overflow-hidden">
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-violet-600 via-indigo-600 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <Badge className="mb-4 bg-white/20 text-white border-white/40">Approach</Badge>
