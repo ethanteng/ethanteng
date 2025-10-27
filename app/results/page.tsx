@@ -4,7 +4,7 @@ import { MetricCard } from "@/components/metric-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CASE_STUDIES } from "@/lib/site";
-import { Building2, ExternalLink } from "lucide-react";
+import { Building2, ExternalLink, BarChart3, Zap, Users, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
@@ -134,48 +134,76 @@ export default function ResultsPage() {
             What repeats across every success
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-3">Start with the data</h3>
-                <p className="text-muted-foreground">
-                  Every engagement begins with deep diagnosis—understanding where
-                  users drop off, what drives activation, and where the biggest
-                  opportunities lie.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 shadow-sm shrink-0">
+                    <BarChart3 className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">Start with the data</h3>
+                    <p className="text-muted-foreground">
+                      Every engagement begins with deep diagnosis—understanding where
+                      users drop off, what drives activation, and where the biggest
+                      opportunities lie.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-3">
-                  Obsess over time-to-value
-                </h3>
-                <p className="text-muted-foreground">
-                  The faster users reach their first win, the higher your
-                  activation and retention. Every flow is designed to collapse
-                  time-to-value.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 shadow-sm shrink-0">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">
+                      Obsess over time-to-value
+                    </h3>
+                    <p className="text-muted-foreground">
+                      The faster users reach their first win, the higher your
+                      activation and retention. Every flow is designed to collapse
+                      time-to-value.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-3">
-                  Personalize by intent
-                </h3>
-                <p className="text-muted-foreground">
-                  Different users have different goals. Segment by role, company
-                  size, and use case to deliver relevant experiences that convert.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 shadow-sm shrink-0">
+                    <Users className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">
+                      Personalize by intent
+                    </h3>
+                    <p className="text-muted-foreground">
+                      Different users have different goals. Segment by role, company
+                      size, and use case to deliver relevant experiences that convert.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="text-xl font-bold mb-3">
-                  Build systems, not hacks
-                </h3>
-                <p className="text-muted-foreground">
-                  One-off campaigns don't scale. The wins come from instrumented
-                  tracking, repeatable processes, and tight experiment loops.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 shadow-sm shrink-0">
+                    <Settings className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-3">
+                      Build systems, not hacks
+                    </h3>
+                    <p className="text-muted-foreground">
+                      One-off campaigns don't scale. The wins come from instrumented
+                      tracking, repeatable processes, and tight experiment loops.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
