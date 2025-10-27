@@ -117,26 +117,26 @@ export default function AboutPage() {
 
               {/* Contact Footer */}
               <div className="border-t border-border/50 bg-muted/30 p-6 md:p-8">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <Button asChild size="default">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                  <Button asChild size="lg">
                     <Link href="/contact">
-                      Let's talk <ArrowRight className="ml-2 h-4 w-4" />
+                      Let's talk <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   <a
                     href={`mailto:${SITE.email}`}
-                    className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-base text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-5 w-5" />
                     <span>{SITE.email}</span>
                   </a>
                   <a
                     href={SITE.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center gap-2 px-4 py-2 text-base text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    <Linkedin className="h-4 w-4" />
+                    <Linkedin className="h-5 w-5" />
                     <span>LinkedIn</span>
                   </a>
                 </div>
