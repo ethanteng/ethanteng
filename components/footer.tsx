@@ -17,8 +17,8 @@ export function Footer() {
       <div className="container mx-auto px-4 max-w-7xl py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div className="flex flex-col justify-between h-full">
-            <div className="mb-8">
+          <div className="space-y-4">
+            <div>
               <LogoLarge />
             </div>
             <p className="text-base text-muted-foreground max-w-md leading-relaxed">
