@@ -65,7 +65,7 @@ export default function AboutPage() {
                   </p>
 
                   {/* Company Logos */}
-                  <div className="flex flex-wrap items-center gap-6 pt-2 pb-4 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                  <div className="flex flex-wrap items-center gap-6 pt-2 pb-4">
                     <Image src="/meez.svg" alt="meez" width={70} height={28} className="h-7 w-auto" />
                     <Image src="/postman.svg" alt="Postman" width={100} height={28} className="h-7 w-auto" />
                     <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto" />
