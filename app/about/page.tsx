@@ -18,7 +18,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero with Photo */}
-      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 text-white relative overflow-hidden">
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-slate-700 via-gray-600 to-slate-800 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Header with Photo */}
