@@ -32,55 +32,53 @@ export default function ContactPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Contact Info */}
-            <div className="lg:col-span-1">
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-xl font-bold mb-6">Other ways to connect</h2>
-                  <div className="space-y-6">
-                    {/* Email */}
-                    <div className="flex items-start space-x-3 group">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
-                        <Mail className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="flex-1 pt-1">
-                        <h3 className="text-sm font-medium text-muted-foreground mb-1">Email</h3>
-                        <a
-                          href={`mailto:${SITE.email}`}
-                          className="text-base font-semibold text-foreground hover:text-primary transition-colors"
-                        >
-                          {SITE.email}
-                        </a>
-                      </div>
+            <div className="lg:col-span-1 space-y-8">
+              <div>
+                <h2 className="text-xl font-bold mb-6">Other ways to connect</h2>
+                <div className="space-y-6">
+                  {/* Email */}
+                  <div className="flex items-start space-x-3 group">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
+                      <Mail className="h-6 w-6 text-white" />
                     </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className="text-sm font-medium text-muted-foreground mb-1">Email</h3>
+                      <a
+                        href={`mailto:${SITE.email}`}
+                        className="text-base font-semibold text-foreground hover:text-primary transition-colors"
+                      >
+                        {SITE.email}
+                      </a>
+                    </div>
+                  </div>
 
-                    {/* LinkedIn */}
-                    <div className="flex items-start space-x-3 group">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
-                        <Linkedin className="h-6 w-6 text-white" />
-                      </div>
-                      <div className="flex-1 pt-1">
-                        <h3 className="text-sm font-medium text-muted-foreground mb-1">LinkedIn</h3>
-                        <a
-                          href={SITE.social.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-base font-semibold text-foreground hover:text-primary transition-colors"
-                        >
-                          Connect with me →
-                        </a>
-                      </div>
+                  {/* LinkedIn */}
+                  <div className="flex items-start space-x-3 group">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shrink-0 shadow-sm group-hover:shadow-md transition-shadow">
+                      <Linkedin className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="flex-1 pt-1">
+                      <h3 className="text-sm font-medium text-muted-foreground mb-1">LinkedIn</h3>
+                      <a
+                        href={SITE.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-base font-semibold text-foreground hover:text-primary transition-colors"
+                      >
+                        Connect with me →
+                      </a>
                     </div>
                   </div>
                 </div>
+              </div>
 
-                {/* Response Time Note */}
-                <div className="pt-6 border-t">
-                  <div className="flex items-center space-x-2 text-muted-foreground">
-                    <Clock className="h-4 w-4" />
-                    <p className="text-sm">
-                      I typically respond within 24 hours
-                    </p>
-                  </div>
+              {/* Response Time Note */}
+              <div className="pt-6 border-t">
+                <div className="flex items-center space-x-2 text-muted-foreground">
+                  <Clock className="h-4 w-4" />
+                  <p className="text-sm">
+                    I typically respond within 24 hours
+                  </p>
                 </div>
               </div>
             </div>
