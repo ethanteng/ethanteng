@@ -29,10 +29,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Ethan Teng" }],
   creator: "Ethan Teng",
   metadataBase: new URL("https://ethanteng.com"),
-  icons: {
-    icon: "/Ethan Teng Consulting logo.png",
-    apple: "/Ethan Teng Consulting logo.png",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",

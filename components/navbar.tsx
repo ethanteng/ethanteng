@@ -40,8 +40,47 @@ export function Navbar() {
       <nav className="container mx-auto px-4 max-w-7xl">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-accent to-purple-600 text-primary-foreground font-bold text-xl shadow-lg hover:shadow-xl transition-shadow">
-              ET
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-black shadow-lg hover:shadow-xl transition-shadow p-2">
+              <svg
+                viewBox="0 0 100 100"
+                className="w-full h-full"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M50 10 L85 50 L50 90 L15 50 Z"
+                  stroke="white"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M50 25 L72.5 50 L50 75 L27.5 50 Z"
+                  stroke="white"
+                  strokeWidth="3"
+                />
+                <path
+                  d="M50 35 L62.5 50 L50 65 L37.5 50 Z"
+                  stroke="white"
+                  strokeWidth="3"
+                />
+                <line
+                  x1="50"
+                  y1="10"
+                  x2="50"
+                  y2="25"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  opacity="0.7"
+                />
+                <line
+                  x1="50"
+                  y1="75"
+                  x2="50"
+                  y2="90"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  opacity="0.7"
+                />
+              </svg>
             </div>
             <div className="hidden sm:block">
               <div className="text-lg font-bold leading-tight">Ethan Teng</div>
@@ -80,8 +119,47 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[85vw] max-w-[400px] pt-6 px-6">
               <Link href="/" className="flex items-center space-x-3 mb-10 mt-2">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary via-accent to-purple-600 text-primary-foreground font-bold text-xl shadow-lg">
-                  ET
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-black shadow-lg p-2">
+                  <svg
+                    viewBox="0 0 100 100"
+                    className="w-full h-full"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M50 10 L85 50 L50 90 L15 50 Z"
+                      stroke="white"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M50 25 L72.5 50 L50 75 L27.5 50 Z"
+                      stroke="white"
+                      strokeWidth="3"
+                    />
+                    <path
+                      d="M50 35 L62.5 50 L50 65 L37.5 50 Z"
+                      stroke="white"
+                      strokeWidth="3"
+                    />
+                    <line
+                      x1="50"
+                      y1="10"
+                      x2="50"
+                      y2="25"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      opacity="0.7"
+                    />
+                    <line
+                      x1="50"
+                      y1="75"
+                      x2="50"
+                      y2="90"
+                      stroke="white"
+                      strokeWidth="2.5"
+                      opacity="0.7"
+                    />
+                  </svg>
                 </div>
                 <div>
                   <div className="text-lg font-bold leading-tight">Ethan Teng</div>
