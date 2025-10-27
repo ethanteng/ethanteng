@@ -2,12 +2,12 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { BarChart3, Zap, Users, Target, Activity, Boxes } from "lucide-react";
+import { BarChart3, Zap, Users, Target, Activity, Boxes, LucideIcon } from "lucide-react";
 
 interface FeatureCardProps {
   title: string;
   description: string;
-  icon?: string;
+  icon?: string | LucideIcon;
 }
 
 const iconColors = [
@@ -28,10 +28,14 @@ const iconMap = {
   Boxes
 };
 
-export function FeatureCard({ title, description, icon: iconName }: FeatureCardProps) {
+export function FeatureCard({ title, description, icon }: FeatureCardProps) {
   const colorIndex = Math.abs(title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % iconColors.length;
   const gradientClass = iconColors[colorIndex];
-  const Icon = iconName ? iconMap[iconName as keyof typeof iconMap] : undefined;
+  
+  // Handle both string icon names and direct icon components
+  const Icon = typeof icon === 'string' 
+    ? iconMap[icon as keyof typeof iconMap] 
+    : icon;
 
   return (
     <motion.div
