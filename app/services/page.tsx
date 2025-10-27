@@ -73,34 +73,55 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Equity-Based */}
-        <div className="max-w-4xl mx-auto mt-8">
-          <Card className="bg-muted/50">
-            <CardContent className="p-6">
-              <div className="flex items-start justify-between mb-3">
-                <div>
-                  <h3 className="text-xl font-bold mb-2">
-                    Equity-based engagements
-                  </h3>
-                  <Badge variant="outline" className="mb-3">
-                    Limited availability
-                  </Badge>
+        {/* Additional Options */}
+        <div className="max-w-6xl mx-auto mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Equity-Based */}
+            <Card className="bg-muted/50">
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">
+                      Equity-based engagements
+                    </h3>
+                    <Badge variant="outline" className="mb-3">
+                      Limited availability
+                    </Badge>
+                  </div>
+                  <span className="text-xl font-bold text-primary">Custom</span>
                 </div>
-                <span className="text-xl font-bold text-primary">Custom</span>
-              </div>
-              <p className="text-muted-foreground text-sm mb-3">
-                I take on one equity client at a time, typically mirroring the
-                Build-out or Fractional engagement structure. Requires strong
-                founder fit and clear value exchange.
-              </p>
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
-                <p className="text-xs text-yellow-800 dark:text-yellow-200">
-                  <strong>June 2025 update:</strong> Not taking new equity clients
-                  at this time.
+                <p className="text-muted-foreground text-sm mb-3">
+                  I take on one equity client at a time, typically mirroring the
+                  Build-out or Fractional engagement structure. Requires strong
+                  founder fit and clear value exchange.
                 </p>
-              </div>
-            </CardContent>
-          </Card>
+                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
+                  <p className="text-xs text-yellow-800 dark:text-yellow-200">
+                    <strong>June 2025 update:</strong> Not taking new equity clients
+                    at this time.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Ad-hoc */}
+            <Card className="bg-muted/50">
+              <CardContent className="p-6">
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Ad-hoc consulting</h3>
+                    <Badge variant="outline" className="mb-3">
+                      Limited spots
+                    </Badge>
+                  </div>
+                  <span className="text-xl font-bold text-primary">
+                    {ADHOC.rate}
+                  </span>
+                </div>
+                <p className="text-muted-foreground text-sm">{ADHOC.note}</p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </Section>
 
@@ -120,26 +141,6 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </Section>
-
-      {/* Ad-hoc */}
-      <Section className="bg-muted/30">
-        <Card className="max-w-4xl mx-auto">
-          <CardContent className="p-8">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">Ad-hoc consulting</h3>
-                <Badge variant="outline" className="mb-4">
-                  Limited spots
-                </Badge>
-              </div>
-              <span className="text-2xl font-bold text-primary">
-                {ADHOC.rate}
-              </span>
-            </div>
-            <p className="text-muted-foreground">{ADHOC.note}</p>
-          </CardContent>
-        </Card>
       </Section>
 
       {/* What to Expect */}
