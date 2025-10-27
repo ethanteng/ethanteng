@@ -71,13 +71,12 @@ export default function HomePage() {
             className="flex flex-wrap items-center justify-center gap-3"
           >
             {credibilityChips.map((chip, index) => (
-              <Badge
+              <span
                 key={index}
-                variant="secondary"
-                className="text-sm px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+                className="text-xs px-3 py-1.5 text-gray-400 border-none bg-transparent"
               >
                 {chip}
-              </Badge>
+              </span>
             ))}
           </motion.div>
         </div>
