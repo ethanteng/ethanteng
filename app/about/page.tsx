@@ -40,94 +40,94 @@ export default function AboutPage() {
           </div>
 
           {/* Bio Card */}
-          <Card className="mb-8 border-0 shadow-sm bg-gradient-to-br from-card via-card to-muted/20">
-            <CardContent className="p-8 md:p-10">
-              <div className="space-y-6">
-                <div>
-                  <p className="text-2xl md:text-3xl font-semibold text-foreground leading-relaxed mb-6">
-                    Building self-serve revenue engines from $0 to $100M+
-                  </p>
-                  <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
-                </div>
-
-                <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    I'm a PLG product leader with a hands-on track record building 
-                    self-serve revenue engines that scale.
-                  </p>
-                  <p>
-                    Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
-                    building AI tools to help product teams move faster.
-                  </p>
-                  <p>
-                    Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
-                    at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
-                  </p>
-
-                  {/* Company Logos */}
-                  <div className="flex flex-wrap items-center gap-6 pt-2 pb-4">
-                    <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto" />
-                    <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto" />
-                    <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto" />
-                    <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto" />
+          <Card className="border-0 shadow-lg">
+            <CardContent className="p-0">
+              {/* Main Content */}
+              <div className="p-8 md:p-10 bg-gradient-to-br from-card via-card to-muted/20">
+                <div className="space-y-6">
+                  <div>
+                    <p className="text-2xl md:text-3xl font-semibold text-foreground leading-relaxed mb-6">
+                      Building self-serve revenue engines from $0 to $100M+
+                    </p>
+                    <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
                   </div>
 
-                  {/* Stanford Education - Highlighted */}
-                  <div className="pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-4">
-                      <div className="relative w-14 h-14 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/50">
-                        <Image 
-                          src="/stanford.jpg" 
-                          alt="Stanford University" 
-                          fill 
-                          className="object-cover"
-                        />
-                      </div>
-                      <div>
-                        <p className="text-base font-semibold text-foreground">
-                          BS in Computer Science
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          Stanford University
-                        </p>
-                      </div>
+                  <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+                    <p>
+                      I'm a PLG product leader with a hands-on track record building 
+                      self-serve revenue engines that scale.
+                    </p>
+                    <p>
+                      Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
+                      building AI tools to help product teams move faster.
+                    </p>
+                    <p>
+                      Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
+                      at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
+                    </p>
+
+                    {/* Company Logos */}
+                    <div className="flex flex-wrap items-center gap-6 pt-3">
+                      <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                      <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                      <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                      <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Education & Contact Footer */}
+              <div className="border-t border-border/50 bg-muted/30 p-6 md:p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                  {/* Stanford Education */}
+                  <div className="flex items-center gap-4">
+                    <div className="relative w-12 h-12 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/30">
+                      <Image 
+                        src="/stanford.jpg" 
+                        alt="Stanford University" 
+                        fill 
+                        className="object-cover"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">
+                        BS in Computer Science
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        Stanford University
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Contact Actions */}
+                  <div className="flex flex-wrap items-center gap-3">
+                    <Button asChild size="default">
+                      <Link href="/contact">
+                        Let's talk <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                    <a
+                      href={`mailto:${SITE.email}`}
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Mail className="h-4 w-4" />
+                      <span className="hidden sm:inline">{SITE.email}</span>
+                    </a>
+                    <a
+                      href={SITE.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span className="hidden sm:inline">LinkedIn</span>
+                    </a>
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
-
-          {/* Contact Actions */}
-          <div className="flex flex-wrap items-center gap-4">
-            <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-              <Link href="/contact">
-                Let's talk <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <div className="flex items-center gap-4 pl-2">
-              <a
-                href={`mailto:${SITE.email}`}
-                className="group flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <div className="p-2 rounded-lg bg-muted/50 group-hover:bg-muted transition-colors">
-                  <Mail className="h-4 w-4" />
-                </div>
-                <span className="font-medium">{SITE.email}</span>
-              </a>
-              <a
-                href={SITE.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <div className="p-2 rounded-lg bg-muted/50 group-hover:bg-muted transition-colors">
-                  <Linkedin className="h-4 w-4" />
-                </div>
-                <span className="font-medium">LinkedIn</span>
-              </a>
-            </div>
-          </div>
         </div>
       </Section>
 
