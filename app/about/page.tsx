@@ -50,7 +50,7 @@ export default function AboutPage() {
                   <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
                 </div>
 
-                <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+                <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed">
                   <p>
                     I'm a PLG product leader with a hands-on track record building 
                     self-serve revenue engines that scale.
@@ -61,12 +61,38 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
-                    at Postman ($100M+ milestone), Product Analytics at Braintree/PayPal, and roles 
-                    at Recurly and wikiHow.
+                    at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
                   </p>
-                  <p className="text-sm pt-2 border-t border-border/50">
-                    BS in Computer Science, Stanford University
-                  </p>
+
+                  {/* Company Logos */}
+                  <div className="flex flex-wrap items-center gap-6 pt-2 pb-4 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                    <Image src="/meez.svg" alt="meez" width={70} height={28} className="h-7 w-auto" />
+                    <Image src="/postman.svg" alt="Postman" width={100} height={28} className="h-7 w-auto" />
+                    <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto" />
+                    <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto" />
+                  </div>
+
+                  {/* Stanford Education - Highlighted */}
+                  <div className="pt-4 border-t border-border/50">
+                    <div className="flex items-center gap-4">
+                      <div className="relative w-14 h-14 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/50">
+                        <Image 
+                          src="/stanford.jpg" 
+                          alt="Stanford University" 
+                          fill 
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-base font-semibold text-foreground">
+                          BS in Computer Science
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          Stanford University
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </CardContent>
