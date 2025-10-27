@@ -17,17 +17,17 @@ export function Footer() {
       <div className="container mx-auto px-4 max-w-7xl py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
-          <div>
-            <div className="mb-6">
+          <div className="flex flex-col justify-between h-full">
+            <div className="mb-8">
               <Image
                 src="/Ethan Teng Consulting logo.png"
                 alt="Ethan Teng Consulting"
-                width={280}
-                height={64}
-                className="h-16 w-auto invert dark:invert-0"
+                width={420}
+                height={96}
+                className="h-24 w-auto invert dark:invert-0"
               />
             </div>
-            <p className="text-sm text-muted-foreground max-w-xs">
+            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
               Turn traction into self-serve revenue.
             </p>
           </div>
