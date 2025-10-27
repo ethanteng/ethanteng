@@ -18,22 +18,27 @@ const processSteps = [
   {
     title: "Discovery",
     description: "Understand your business, goals, and current state",
+    color: "from-blue-500 to-indigo-600",
   },
   {
     title: "Diagnostics",
     description: "Analyze data, identify gaps, and prioritize opportunities",
+    color: "from-purple-500 to-pink-600",
   },
   {
     title: "Design",
     description: "Create detailed plans and implementation roadmaps",
+    color: "from-green-500 to-emerald-600",
   },
   {
     title: "Ship",
     description: "Build and launch with your team, hands-on",
+    color: "from-amber-500 to-orange-600",
   },
   {
     title: "Measure",
     description: "Track results, iterate, and optimize continuously",
+    color: "from-cyan-500 to-blue-600",
   },
 ];
 
@@ -150,11 +155,11 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {processSteps.map((step, index) => (
               <div key={index} className="flex flex-col items-center text-center">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold mb-3 shadow-sm">
+                <div className={`flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${step.color} text-white text-base font-bold mb-4 shadow-md`}>
                   {index + 1}
                 </div>
-                <h3 className="font-semibold mb-1.5 text-base">{step.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
+                <h3 className="font-semibold mb-2 text-lg">{step.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
               </div>
