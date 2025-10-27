@@ -34,13 +34,13 @@ export function PriceCard({
       transition={{ duration: 0.5 }}
       whileHover={{ y: -8 }}
     >
-      <Card className={`h-full flex flex-col ${featured ? "border-primary shadow-lg" : ""}`}>
+      <Card className={`h-full flex flex-col relative ${featured ? "border-primary shadow-lg" : ""}`}>
+        {featured && (
+          <Badge className="absolute -top-3 left-1/2 -translate-x-1/2" variant="default">
+            Most Popular
+          </Badge>
+        )}
         <CardHeader>
-          {featured && (
-            <Badge className="w-fit mb-2" variant="default">
-              Most Popular
-            </Badge>
-          )}
           <CardTitle className="text-2xl">{title}</CardTitle>
           <div className="flex items-baseline space-x-2">
             <span className="text-3xl font-bold text-primary">{price}</span>
