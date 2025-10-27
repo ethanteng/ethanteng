@@ -18,11 +18,11 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero with Photo */}
-      <Section className="pt-32 pb-16 bg-gradient-to-b from-muted/30 to-background">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-start gap-6 mb-8">
-            {/* Small Photo */}
-            <div className="relative w-24 h-24 rounded-full overflow-hidden shadow-lg shrink-0">
+      <Section className="pt-32 pb-20">
+        <div className="max-w-5xl mx-auto">
+          {/* Header with Photo */}
+          <div className="flex items-center gap-6 mb-12">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-primary/10 shrink-0">
               <Image
                 src="/Ethan.jpg"
                 alt="Ethan Teng"
@@ -31,59 +31,73 @@ export default function AboutPage() {
                 priority
               />
             </div>
-
-            {/* Header */}
             <div>
-              <Badge className="mb-3">About</Badge>
-              <h1 className="text-4xl md:text-5xl font-bold mb-2">
+              <Badge className="mb-3" variant="secondary">About</Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Hi, I'm Ethan
               </h1>
-              <p className="text-xl text-muted-foreground">
-                Building self-serve revenue engines from $0 to $100M+
-              </p>
             </div>
           </div>
 
-          {/* Bio */}
-          <div className="space-y-4 text-lg text-muted-foreground leading-relaxed mb-8">
-            <p>
-              I'm a PLG product leader with a hands-on track record building 
-              self-serve revenue engines that scale.
-            </p>
-            <p>
-              Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
-              building AI tools to help product teams move faster. Previously: VP Growth at meez 
-              ($0→$1M+ self-serve ARR), Growth Data Science at Postman ($100M+ milestone), 
-              Product Analytics at Braintree/PayPal, and roles at Recurly and wikiHow.
-            </p>
-            <p className="text-base text-muted-foreground/80">
-              BS in Computer Science, Stanford University
-            </p>
-          </div>
+          {/* Bio Card */}
+          <Card className="mb-8 border-0 shadow-sm bg-gradient-to-br from-card via-card to-muted/20">
+            <CardContent className="p-8 md:p-10">
+              <div className="space-y-6">
+                <div>
+                  <p className="text-2xl md:text-3xl font-semibold text-foreground leading-relaxed mb-6">
+                    Building self-serve revenue engines from $0 to $100M+
+                  </p>
+                  <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
+                </div>
 
-          {/* Quick Contact */}
+                <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
+                  <p>
+                    I'm a PLG product leader with a hands-on track record building 
+                    self-serve revenue engines that scale.
+                  </p>
+                  <p>
+                    Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
+                    building AI tools to help product teams move faster. Previously: VP Growth at meez 
+                    ($0→$1M+ self-serve ARR), Growth Data Science at Postman ($100M+ milestone), 
+                    Product Analytics at Braintree/PayPal, and roles at Recurly and wikiHow.
+                  </p>
+                  <p className="text-sm pt-2 border-t border-border/50">
+                    BS in Computer Science, Stanford University
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Contact Actions */}
           <div className="flex flex-wrap items-center gap-4">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
               <Link href="/contact">
                 Let's talk <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <a
-              href={`mailto:${SITE.email}`}
-              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-              <span>{SITE.email}</span>
-            </a>
-            <a
-              href={SITE.social.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-              <span>LinkedIn</span>
-            </a>
+            <div className="flex items-center gap-4 pl-2">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="group flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <div className="p-2 rounded-lg bg-muted/50 group-hover:bg-muted transition-colors">
+                  <Mail className="h-4 w-4" />
+                </div>
+                <span className="font-medium">{SITE.email}</span>
+              </a>
+              <a
+                href={SITE.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <div className="p-2 rounded-lg bg-muted/50 group-hover:bg-muted transition-colors">
+                  <Linkedin className="h-4 w-4" />
+                </div>
+                <span className="font-medium">LinkedIn</span>
+              </a>
+            </div>
           </div>
         </div>
       </Section>
