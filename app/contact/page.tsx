@@ -114,8 +114,8 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card>
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-primary">1</span>
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <span className="text-xl font-bold text-white">1</span>
                 </div>
                 <h3 className="font-semibold mb-2">I'll respond within 24 hours</h3>
                 <p className="text-sm text-muted-foreground">
@@ -126,8 +126,8 @@ export default function ContactPage() {
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-primary">2</span>
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <span className="text-xl font-bold text-white">2</span>
                 </div>
                 <h3 className="font-semibold mb-2">We'll have a 30-min call</h3>
                 <p className="text-sm text-muted-foreground">
@@ -138,8 +138,8 @@ export default function ContactPage() {
             </Card>
             <Card>
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-xl font-bold text-primary">3</span>
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <span className="text-xl font-bold text-white">3</span>
                 </div>
                 <h3 className="font-semibold mb-2">I'll send a proposal</h3>
                 <p className="text-sm text-muted-foreground">
