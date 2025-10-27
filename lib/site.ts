@@ -209,12 +209,37 @@ export const CASE_STUDIES = [
     }
   },
   {
+    id: 'recurly',
+    company: 'Recurly',
+    title: 'Led Sales-led to PLG Shift',
+    role: 'Head of Growth',
+    metrics: [
+      { label: 'Revenue growth', value: '3X', context: 'contributed to acquisition' },
+      { label: 'Activation rate', value: '3X', context: 'improvement' },
+      { label: 'ARPU increase', value: '1.5X', context: 'through optimization' }
+    ],
+    fullContext: {
+      context: 'Leading company-wide transformation from Sales-led to Product-Led Growth at subscription billing platform powering global brands like Twitch & Paramount+.',
+      constraints: null,
+      actions: [
+        'Led company-wide shift from Sales-led to PLG model',
+        'Built first Growth team from scratch',
+        'Ran experiments across acquisition, onboarding, and monetization',
+        '3X\'d activation rate through lifecycle optimization',
+        'Increased ARPU 1.5X through pricing tests and optimization',
+        'Introduced cohort-based growth modeling to guide GTM strategy'
+      ],
+      results: 'Contributed to 3X revenue growth and successful Accel-KKR acquisition through PLG transformation and growth experimentation.'
+    }
+  },
+  {
     id: 'braintree',
     company: 'Braintree/PayPal',
     title: 'Launched ACH Product',
-    role: 'Product Analytics',
+    role: 'Director of Product',
     metrics: [
-      { label: 'Market access', value: '$43T', context: 'total addressable market' }
+      { label: 'Market access', value: '$43T', context: 'total addressable market' },
+      { label: 'Profitability achieved', value: '6 months', context: 'from product launch' }
     ],
     fullContext: {
       context: 'Launching ACH payment product to access $43 trillion domestic payments market. Needed analytics strategy to track adoption and inform go-to-market.',

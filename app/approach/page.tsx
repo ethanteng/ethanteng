@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/section";
 import { FeatureCard } from "@/components/feature-card";
+import { MetricsCarousel } from "@/components/metrics-carousel";
 import { Badge } from "@/components/ui/badge";
 import { APPROACH_PRINCIPLES } from "@/lib/site";
 import { Search, Pencil, Hammer, TrendingUp } from "lucide-react";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Approach",
@@ -61,75 +61,9 @@ export default function ApproachPage() {
         </div>
       </Section>
 
-      {/* Experience Context */}
-      <Section className="bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Built from real experience
-          </h2>
-          <div className="space-y-8">
-            <div className="border-l-4 border-primary pl-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0">
-                  <Image
-                    src="/meez.png"
-                    alt="meez logo"
-                    width={40}
-                    height={40}
-                    className="object-contain w-full h-full p-1"
-                  />
-                </div>
-                <h3 className="text-xl font-bold">At meez</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Built the entire self-serve motion from $0 to $1M+ ARR. Designed
-                onboarding flows that activated 50% of users in 7 days, cut
-                time-to-value from 30 days to under 1 day, and reduced churn to
-                under 5% in key cohorts. Created behavioral segmentation that
-                routed 30% of signups to sales as product-qualified leads.
-              </p>
-            </div>
-            <div className="border-l-4 border-primary pl-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0">
-                  <Image
-                    src="/postman.jpg"
-                    alt="Postman logo"
-                    width={40}
-                    height={40}
-                    className="object-contain w-full h-full p-1"
-                  />
-                </div>
-                <h3 className="text-xl font-bold">At Postman</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Scaled PLG revenue operations to cross $100M self-serve ARR.
-                Built forecasting models with &lt;5% variance, instrumented
-                free-to-paid funnels across millions of users, and created
-                experimentation frameworks that drove +50% PLG revenue growth.
-              </p>
-            </div>
-            <div className="border-l-4 border-primary pl-6">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center overflow-hidden shrink-0">
-                  <Image
-                    src="/braintree.svg"
-                    alt="Braintree logo"
-                    width={40}
-                    height={40}
-                    className="object-contain w-full h-full p-1"
-                  />
-                </div>
-                <h3 className="text-xl font-bold">At Braintree/PayPal</h3>
-              </div>
-              <p className="text-muted-foreground">
-                Led analytics for ACH product launch into a $43 trillion market.
-                Designed instrumentation strategy, tracked adoption metrics, and
-                supported go-to-market with data-driven insights.
-              </p>
-            </div>
-          </div>
-        </div>
+      {/* Metrics Carousel */}
+      <Section className="bg-gradient-to-b from-background via-muted/20 to-background">
+        <MetricsCarousel />
       </Section>
 
       {/* How It Works */}
