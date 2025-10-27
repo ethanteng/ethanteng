@@ -80,10 +80,10 @@ export default function AboutPage() {
                       </p>
                       {/* Company Logos */}
                       <div className="flex flex-wrap items-center gap-4">
-                        <Image src="/meez.png" alt="meez" width={35} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/postman.jpg" alt="Postman" width={50} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/braintree.svg" alt="Braintree" width={50} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/recurly.svg" alt="Recurly" width={40} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/meez.png" alt="meez" width={50} height={20} className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/postman.jpg" alt="Postman" width={72} height={20} className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/braintree.svg" alt="Braintree" width={72} height={20} className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/recurly.svg" alt="Recurly" width={58} height={20} className="h-5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
 
