@@ -33,10 +33,12 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info */}
             <div className="space-y-6">
-              <Card>
+              <Card className="hover:border-blue-500/30 transition-colors">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-3">
-                    <Mail className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shrink-0">
+                      <Mail className="h-5 w-5 text-white" />
+                    </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <a
@@ -50,10 +52,12 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:border-green-500/30 transition-colors">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-3">
-                    <Phone className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shrink-0">
+                      <Phone className="h-5 w-5 text-white" />
+                    </div>
                     <div>
                       <h3 className="font-semibold mb-1">Phone</h3>
                       <a
@@ -67,10 +71,12 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:border-blue-600/30 transition-colors">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-3">
-                    <Linkedin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center shrink-0">
+                      <Linkedin className="h-5 w-5 text-white" />
+                    </div>
                     <div>
                       <h3 className="font-semibold mb-1">LinkedIn</h3>
                       <a
@@ -86,10 +92,12 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:border-purple-500/30 transition-colors">
                 <CardContent className="pt-6">
                   <div className="flex items-start space-x-3">
-                    <Clock className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shrink-0">
+                      <Clock className="h-5 w-5 text-white" />
+                    </div>
                     <div>
                       <h3 className="font-semibold mb-1">Response time</h3>
                       <p className="text-sm text-muted-foreground">

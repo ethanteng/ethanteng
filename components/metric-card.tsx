@@ -17,14 +17,17 @@ export function MetricCard({ label, value, context }: MetricCardProps) {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="p-6 text-center hover:shadow-lg transition-shadow">
-        <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-          {value}
+      <Card className="relative overflow-hidden p-6 text-center hover:shadow-lg transition-all hover:border-primary/50 group">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="relative">
+          <div className="text-3xl md:text-4xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-2">
+            {value}
+          </div>
+          <div className="text-sm font-medium text-foreground mb-1">{label}</div>
+          {context && (
+            <div className="text-xs text-muted-foreground">{context}</div>
+          )}
         </div>
-        <div className="text-sm font-medium text-foreground mb-1">{label}</div>
-        {context && (
-          <div className="text-xs text-muted-foreground">{context}</div>
-        )}
       </Card>
     </motion.div>
   );

@@ -84,10 +84,10 @@ export default function AboutPage() {
             Get in touch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-all hover:border-blue-500/30 group">
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+                  <Mail className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="font-semibold mb-2">Email</h3>
                 <a
@@ -98,10 +98,10 @@ export default function AboutPage() {
                 </a>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-all hover:border-green-500/30 group">
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Phone className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4 shadow-sm">
+                  <Phone className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="font-semibold mb-2">Phone</h3>
                 <a
@@ -112,10 +112,10 @@ export default function AboutPage() {
                 </a>
               </CardContent>
             </Card>
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-all hover:border-blue-600/30 group">
               <CardContent className="pt-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Linkedin className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center mx-auto mb-4 shadow-sm">
+                  <Linkedin className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="font-semibold mb-2">LinkedIn</h3>
                 <a
