@@ -65,7 +65,7 @@ export default function AboutPage() {
                       </h3>
                       <p className="text-base md:text-lg text-foreground leading-relaxed">
                         Founding <span className="font-semibold">Ask Linc</span>, 
-                        building AI tools to help product teams move faster.
+                        a privacy-first GPT built for your finances.
                       </p>
                     </div>
 
@@ -79,11 +79,11 @@ export default function AboutPage() {
                         at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
                       </p>
                       {/* Company Logos */}
-                      <div className="flex flex-wrap items-center gap-6">
-                        <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                        <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                      <div className="flex flex-wrap items-center gap-4">
+                        <Image src="/meez.png" alt="meez" width={35} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/postman.jpg" alt="Postman" width={50} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/braintree.svg" alt="Braintree" width={50} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/recurly.svg" alt="Recurly" width={40} height={14} className="h-3.5 w-auto opacity-80 hover:opacity-100 transition-opacity" />
                       </div>
                     </div>
 
