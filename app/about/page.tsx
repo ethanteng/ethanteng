@@ -63,10 +63,24 @@ export default function AboutPage() {
                       <div className="h-2 w-2 rounded-full bg-primary animate-pulse" />
                       Current
                     </h3>
-                    <p className="text-base sm:text-lg text-foreground leading-relaxed font-medium">
-                      Founding <a href="https://www.asklinc.com/" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-primary transition-colors underline decoration-primary/30 hover:decoration-primary">Ask Linc</a>, 
-                      a privacy-first AI for your personal finances.
-                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden shadow-sm shrink-0 ring-1 ring-border/30 bg-black">
+                        <Image 
+                          src="/Ask Linc logo simple.png" 
+                          alt="Ask Linc" 
+                          fill 
+                          className="object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm sm:text-base font-semibold text-foreground">
+                          Founder
+                        </p>
+                        <p className="text-xs sm:text-sm text-muted-foreground">
+                          <a href="https://www.asklinc.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline decoration-primary/30 hover:decoration-primary">Ask Linc</a> • Privacy-first AI for personal finances
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Education */}
