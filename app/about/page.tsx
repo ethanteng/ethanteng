@@ -52,26 +52,33 @@ export default function AboutPage() {
                     <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent rounded-full" />
                   </div>
 
-                  <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-                    <p>
+                  <div className="space-y-4">
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                       I'm a PLG product leader with a hands-on track record building 
                       self-serve revenue engines that scale.
                     </p>
-                    <p>
-                      Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
-                      building AI tools to help product teams move faster.
-                    </p>
-                    <p className="text-sm md:text-base">
-                      Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
-                      at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
-                    </p>
 
-                    {/* Company Logos */}
-                    <div className="flex flex-wrap items-center gap-6 pt-3">
-                      <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                      <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                      <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
-                      <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                    {/* Current Work - Highlighted Box */}
+                    <div className="p-5 rounded-lg bg-primary/5 border border-primary/10">
+                      <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                        Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
+                        building AI tools to help product teams move faster.
+                      </p>
+                    </div>
+
+                    {/* Previous Work - Box with Logos */}
+                    <div className="p-5 rounded-lg bg-muted/50 border border-border/50">
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+                        Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
+                        at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
+                      </p>
+                      {/* Company Logos */}
+                      <div className="flex flex-wrap items-center gap-6">
+                        <Image src="/meez.png" alt="meez" width={70} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/postman.jpg" alt="Postman" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/braintree.svg" alt="Braintree" width={100} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                        <Image src="/recurly.svg" alt="Recurly" width={80} height={28} className="h-7 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+                      </div>
                     </div>
                   </div>
                 </div>
