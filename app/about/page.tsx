@@ -56,12 +56,8 @@ export default function AboutPage() {
               ($0→$1M+ self-serve ARR), Growth Data Science at Postman ($100M+ milestone), 
               Product Analytics at Braintree/PayPal, and roles at Recurly and wikiHow.
             </p>
-            <p>
-              When I'm not building growth systems, you'll find me skiing, playing 
-              tennis, or exploring SF with my wife and dog.
-            </p>
             <p className="text-base text-muted-foreground/80">
-              BS in Management Science & Engineering, Stanford University
+              BS in Computer Science, Stanford University
             </p>
           </div>
 

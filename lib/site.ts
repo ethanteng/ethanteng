@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Ethan Teng Consulting',
-  email: 'ethanteng@gmail.com',
+  email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
   social: { linkedin: 'https://www.linkedin.com/in/ethanteng' },
   cta: { primary: '/contact', secondary: '/services' }

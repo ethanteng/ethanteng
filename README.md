@@ -138,6 +138,6 @@ Add new pages in the `app` directory following Next.js App Router conventions.
 
 ## Contact
 
-- Email: ethanteng@gmail.com
+- Email: ethan@ethanteng.com
 - Phone: 415-867-6937
 - LinkedIn: [linkedin.com/in/ethanteng](https://www.linkedin.com/in/ethanteng)
