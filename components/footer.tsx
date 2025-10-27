@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Mail, Phone, Linkedin } from "lucide-react";
 import { SITE } from "@/lib/site";
+import { LogoLarge } from "@/components/logo-large";
 
 const footerLinks = [
   { name: "Services", href: "/services" },
@@ -19,15 +19,9 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col justify-between h-full">
             <div className="mb-8">
-              <Image
-                src="/Ethan Teng Consulting logo.png"
-                alt="Ethan Teng Consulting"
-                width={420}
-                height={96}
-                className="h-24 w-auto invert dark:invert-0"
-              />
+              <LogoLarge />
             </div>
-            <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
+            <p className="text-base text-muted-foreground max-w-md leading-relaxed">
               Turn traction into self-serve revenue.
             </p>
           </div>
