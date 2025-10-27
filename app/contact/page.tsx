@@ -87,15 +87,11 @@ export default function ContactPage() {
 
             {/* Calendly Embed */}
             <div className="lg:col-span-2">
-              <Card>
-                <CardContent className="p-0">
-                  <div 
-                    className="calendly-inline-widget" 
-                    data-url="https://calendly.com/ethanteng-sf/plg?hide_event_type_details=1&hide_gdpr_banner=1" 
-                    style={{ minWidth: '320px', height: '700px' }}
-                  />
-                </CardContent>
-              </Card>
+              <div 
+                className="calendly-inline-widget" 
+                data-url="https://calendly.com/ethanteng-sf/plg?hide_event_type_details=1&hide_gdpr_banner=1" 
+                style={{ minWidth: '320px', height: '700px' }}
+              />
               <Script 
                 src="https://assets.calendly.com/assets/external/widget.js" 
                 strategy="lazyOnload"
