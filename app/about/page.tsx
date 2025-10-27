@@ -4,7 +4,7 @@ import { Section } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Linkedin, ArrowRight } from "lucide-react";
+import { Mail, Linkedin, ArrowRight, Rocket, BarChart3, Target, Layers } from "lucide-react";
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 
@@ -138,48 +138,76 @@ export default function AboutPage() {
             What I do
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">
-                  Build self-serve revenue engines
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Design onboarding flows, activation funnels, and lifecycle campaigns 
-                  that turn signups into paying customers without sales calls.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 shadow-sm shrink-0">
+                    <Rocket className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-primary">
+                      Build self-serve revenue engines
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Design onboarding flows, activation funnels, and lifecycle campaigns 
+                      that turn signups into paying customers without sales calls.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">
-                  Instrument for growth
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Set up product analytics, behavioral segmentation, and dashboards 
-                  that surface opportunities and measure what matters.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 shadow-sm shrink-0">
+                    <BarChart3 className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-primary">
+                      Instrument for growth
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Set up product analytics, behavioral segmentation, and dashboards 
+                      that surface opportunities and measure what matters.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">
-                  Optimize conversion funnels
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Run tight experiment loops to identify friction, test hypotheses, 
-                  and improve activation, retention, and monetization.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-pink-600 shadow-sm shrink-0">
+                    <Target className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-primary">
+                      Optimize conversion funnels
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Run tight experiment loops to identify friction, test hypotheses, 
+                      and improve activation, retention, and monetization.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-lg mb-3 text-primary">
-                  Scale what works
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Build repeatable systems and processes that compound over time—not 
-                  one-off campaigns that need constant attention.
-                </p>
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-gradient-to-br from-amber-500 to-orange-600 shadow-sm shrink-0">
+                    <Layers className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2 text-primary">
+                      Scale what works
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      Build repeatable systems and processes that compound over time—not 
+                      one-off campaigns that need constant attention.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
