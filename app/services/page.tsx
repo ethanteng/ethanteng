@@ -40,13 +40,14 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <>
-      <Section className="pt-32 pb-16 bg-gradient-to-b from-muted/30 to-background">
-        <div className="max-w-3xl mx-auto text-center">
-          <Badge className="mb-4">Services & Pricing</Badge>
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <Badge className="mb-4 bg-white/20 text-white border-white/40">Services & Pricing</Badge>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Growth services designed for early-stage SaaS
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-gray-100">
             Transparent pricing, clear deliverables, and hands-on execution.
             Choose the engagement that fits your stage and needs.
           </p>
