@@ -30,22 +30,33 @@ export default function ApproachPage() {
       </Section>
 
       {/* Principles */}
-      <Section>
-        <div className="text-center mb-12">
+      <Section className="bg-gradient-to-b from-background via-primary/5 to-background relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }} />
+        <div className="text-center mb-16 relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Six core principles
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             The foundation of every engagement, adapted to your unique context
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {APPROACH_PRINCIPLES.map((principle, index) => (
-            <FeatureCard
+            <div 
               key={index}
-              title={principle.title}
-              description={principle.description}
-            />
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+              }}
+            >
+              <FeatureCard
+                title={principle.title}
+                description={principle.description}
+                icon={principle.icon}
+              />
+            </div>
           ))}
         </div>
       </Section>

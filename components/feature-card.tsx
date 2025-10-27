@@ -2,12 +2,12 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { LucideIcon } from "lucide-react";
+import { BarChart3, Zap, Users, Target, Activity, Boxes } from "lucide-react";
 
 interface FeatureCardProps {
   title: string;
   description: string;
-  icon?: LucideIcon;
+  icon?: string;
 }
 
 const iconColors = [
@@ -19,9 +19,19 @@ const iconColors = [
   "from-rose-500 to-red-600",
 ];
 
-export function FeatureCard({ title, description, icon: Icon }: FeatureCardProps) {
+const iconMap = {
+  BarChart3,
+  Zap,
+  Users,
+  Target,
+  Activity,
+  Boxes
+};
+
+export function FeatureCard({ title, description, icon: iconName }: FeatureCardProps) {
   const colorIndex = Math.abs(title.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)) % iconColors.length;
   const gradientClass = iconColors[colorIndex];
+  const Icon = iconName ? iconMap[iconName as keyof typeof iconMap] : undefined;
 
   return (
     <motion.div

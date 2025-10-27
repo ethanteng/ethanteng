@@ -130,27 +130,33 @@ export const EXPERIENCE = [
 export const APPROACH_PRINCIPLES = [
   {
     title: 'Diagnose with data',
-    description: 'Start with behavioral and cohort analysis to understand where value breaks down.'
+    description: 'Start with behavioral and cohort analysis to understand where value breaks down.',
+    icon: 'BarChart3'
   },
   {
     title: 'Design for time-to-value',
-    description: 'Optimize for hours, not weeks. Every step should move users closer to their first win.'
+    description: 'Optimize for hours, not weeks. Every step should move users closer to their first win.',
+    icon: 'Zap'
   },
   {
     title: 'Personalize by intent',
-    description: 'Route users through different onboarding flows based on their role, company, and goals.'
+    description: 'Route users through different onboarding flows based on their role, company, and goals.',
+    icon: 'Users'
   },
   {
     title: 'Route high-intent to sales',
-    description: 'Automatically identify and fast-track qualified leads to your sales team.'
+    description: 'Automatically identify and fast-track qualified leads to your sales team.',
+    icon: 'Target'
   },
   {
     title: 'Instrument everything',
-    description: 'Build robust tracking and dashboards so you can measure what matters and iterate quickly.'
+    description: 'Build robust tracking and dashboards so you can measure what matters and iterate quickly.',
+    icon: 'Activity'
   },
   {
     title: 'Build once, scale everywhere',
-    description: 'Create systems that work across channels and tools, not one-off hacks.'
+    description: 'Create systems that work across channels and tools, not one-off hacks.',
+    icon: 'Boxes'
   }
 ];
 
