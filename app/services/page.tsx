@@ -73,9 +73,9 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Additional Options */}
+        {/* Additional Options & Add-ons */}
         <div className="max-w-6xl mx-auto mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Equity-Based */}
             <Card className="bg-muted/50">
               <CardContent className="p-6">
@@ -121,24 +121,24 @@ export default function ServicesPage() {
                 <p className="text-muted-foreground text-sm">{ADHOC.note}</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </Section>
 
-      {/* Add-ons */}
-      <Section>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Add-ons</h2>
-          <p className="text-muted-foreground mb-8">
-            Enhance any engagement with specialized services:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {ADDONS.map((addon, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                <span>{addon}</span>
-              </div>
-            ))}
+            {/* Add-ons */}
+            <Card className="bg-muted/50">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold mb-4">Add-ons</h3>
+                <p className="text-muted-foreground text-sm mb-4">
+                  Enhance any engagement:
+                </p>
+                <div className="space-y-3">
+                  {ADDONS.map((addon, index) => (
+                    <div key={index} className="flex items-start space-x-2">
+                      <Check className="h-4 w-4 text-primary shrink-0 mt-0.5" />
+                      <span className="text-sm">{addon}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </Section>
