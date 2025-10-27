@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Ethan Teng" }],
   creator: "Ethan Teng",
   metadataBase: new URL("https://ethanteng.com"),
+  icons: {
+    icon: "/Ethan Teng Consulting logo.png",
+    apple: "/Ethan Teng Consulting logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -37,12 +41,21 @@ export const metadata: Metadata = {
     title: "Ethan Teng Consulting — PLG Growth & Self-Serve Revenue",
     description:
       "Turn traction into self-serve revenue. Onboarding, activation, lifecycle, and growth systems that scale.",
+    images: [
+      {
+        url: "/Ethan Teng Consulting logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Ethan Teng Consulting",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ethan Teng Consulting — PLG Growth & Self-Serve Revenue",
     description:
       "Turn traction into self-serve revenue. Onboarding, activation, lifecycle, and growth systems that scale.",
+    images: ["/Ethan Teng Consulting logo.png"],
   },
 };
 
