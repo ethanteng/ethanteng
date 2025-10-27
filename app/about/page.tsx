@@ -65,7 +65,7 @@ export default function AboutPage() {
                         Current
                       </h3>
                       <p className="text-base md:text-lg text-foreground leading-relaxed">
-                        Founding <span className="font-semibold">Ask Linc</span>, 
+                        Founding <a href="https://www.asklinc.com/" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-primary transition-colors underline decoration-primary/30 hover:decoration-primary">Ask Linc</a>, 
                         a privacy-first GPT built for your finances.
                       </p>
                     </div>
