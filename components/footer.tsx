@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 import { SITE } from "@/lib/site";
 import { LogoLarge } from "@/components/logo-large";
 
@@ -54,15 +54,6 @@ export function Footer() {
                 >
                   <Mail className="h-4 w-4" />
                   <span>{SITE.email}</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${SITE.phone.replace(/[^0-9]/g, "")}`}
-                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>{SITE.phone}</span>
                 </a>
               </li>
               <li>
