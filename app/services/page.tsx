@@ -67,41 +67,41 @@ export default function ServicesPage() {
             Three proven engagement models for different stages
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           {OFFERS.map((offer, index) => (
             <PriceCard key={offer.id} {...offer} featured={index === 1} />
           ))}
         </div>
-      </Section>
 
-      {/* Equity-Based */}
-      <Section className="bg-muted/30">
-        <Card className="max-w-4xl mx-auto">
-          <CardContent className="p-8">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">
-                  Equity-based engagements
-                </h3>
-                <Badge variant="outline" className="mb-4">
-                  Limited availability
-                </Badge>
+        {/* Equity-Based */}
+        <div className="max-w-4xl mx-auto mt-8">
+          <Card className="bg-muted/50">
+            <CardContent className="p-6">
+              <div className="flex items-start justify-between mb-3">
+                <div>
+                  <h3 className="text-xl font-bold mb-2">
+                    Equity-based engagements
+                  </h3>
+                  <Badge variant="outline" className="mb-3">
+                    Limited availability
+                  </Badge>
+                </div>
+                <span className="text-xl font-bold text-primary">Custom</span>
               </div>
-              <span className="text-2xl font-bold text-primary">Custom</span>
-            </div>
-            <p className="text-muted-foreground mb-4">
-              I take on one equity client at a time, typically mirroring the
-              Build-out or Fractional engagement structure. Requires strong
-              founder fit and clear value exchange.
-            </p>
-            <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
-              <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                <strong>June 2025 update:</strong> Not taking new equity clients
-                at this time.
+              <p className="text-muted-foreground text-sm mb-3">
+                I take on one equity client at a time, typically mirroring the
+                Build-out or Fractional engagement structure. Requires strong
+                founder fit and clear value exchange.
               </p>
-            </div>
-          </CardContent>
-        </Card>
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-3">
+                <p className="text-xs text-yellow-800 dark:text-yellow-200">
+                  <strong>June 2025 update:</strong> Not taking new equity clients
+                  at this time.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
       </Section>
 
       {/* Add-ons */}
