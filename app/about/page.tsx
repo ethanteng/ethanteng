@@ -18,11 +18,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero with Photo */}
-      <Section className="pt-32 pb-20">
-        <div className="max-w-5xl mx-auto">
+      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-purple-600 via-violet-600 to-indigo-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+        <div className="max-w-5xl mx-auto relative z-10">
           {/* Header with Photo */}
           <div className="flex items-center gap-6 mb-12">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-primary/10 shrink-0">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-white/20 shrink-0 shadow-lg">
               <Image
                 src="/Ethan.jpg"
                 alt="Ethan Teng"
@@ -32,7 +33,7 @@ export default function AboutPage() {
               />
             </div>
             <div>
-              <Badge className="mb-3" variant="secondary">About</Badge>
+              <Badge className="mb-3 bg-white/20 text-white border-white/40">About</Badge>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Hi, I'm Ethan
               </h1>
