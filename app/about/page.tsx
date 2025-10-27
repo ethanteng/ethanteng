@@ -57,9 +57,12 @@ export default function AboutPage() {
                   </p>
                   <p>
                     Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
-                    building AI tools to help product teams move faster. Previously: VP Growth at meez 
-                    ($0→$1M+ self-serve ARR), Growth Data Science at Postman ($100M+ milestone), 
-                    Product Analytics at Braintree/PayPal, and roles at Recurly and wikiHow.
+                    building AI tools to help product teams move faster.
+                  </p>
+                  <p>
+                    Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
+                    at Postman ($100M+ milestone), Product Analytics at Braintree/PayPal, and roles 
+                    at Recurly and wikiHow.
                   </p>
                   <p className="text-sm pt-2 border-t border-border/50">
                     BS in Computer Science, Stanford University
