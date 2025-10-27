@@ -159,31 +159,67 @@ export const CASE_STUDIES = [
     id: 'meez',
     company: 'meez',
     title: '$0 → $1M+ Self-Serve ARR',
+    role: 'VP Growth & Self-Serve',
     metrics: [
       { label: 'Self-serve ARR', value: '$1M+', context: 'in under 2 years' },
       { label: 'Activation rate', value: '50%', context: 'within 7 days' },
       { label: 'PQL rate', value: '30%', context: 'within 7 days' },
       { label: 'Time-to-value', value: '<1 day', context: 'down from 30 days' },
       { label: 'Churn', value: '<5%', context: 'in key cohorts (from 30%)' }
-    ]
+    ],
+    fullContext: {
+      context: 'Early-stage recipe software company with product-market fit but no self-serve motion. High-touch sales only, long time-to-value, unclear activation metrics.',
+      constraints: 'Lean team, limited engineering resources, complex product requiring significant user setup and content migration.',
+      actions: [
+        'Instrumented full-funnel tracking from signup to activation to revenue',
+        'Designed and shipped personalized onboarding flows based on user role',
+        'Built behavioral segmentation to identify and route PQLs to sales',
+        'Created lifecycle email campaigns in Intercom tied to product events',
+        'Reduced time-to-value from 30+ days to under 1 day through workflow redesign'
+      ],
+      results: 'Built self-serve revenue from $0 to $1M+ ARR in under 2 years. 50% activation rate and 30% PQL rate within 7 days. Churn reduced to under 5% in key cohorts.'
+    }
   },
   {
     id: 'postman',
     company: 'Postman',
     title: 'Crossed $100M Self-Serve ARR',
+    role: 'Growth Data Science',
     metrics: [
       { label: 'Self-serve ARR', value: '$100M+', context: 'milestone achieved' },
       { label: 'PLG revenue growth', value: '+50%', context: 'year-over-year' },
       { label: 'Forecast accuracy', value: '<5%', context: 'variance on free-to-paid' }
-    ]
+    ],
+    fullContext: {
+      context: 'Scaling PLG motion from tens of millions to $100M+ self-serve ARR. Needed sophisticated forecasting, experimentation, and analytics to support hypergrowth.',
+      constraints: null,
+      actions: [
+        'Built free-to-paid conversion forecasts with <5% variance',
+        'Designed experimentation framework for growth team',
+        'Instrumented behavioral funnels across millions of users',
+        'Created dashboards tracking activation, engagement, and revenue'
+      ],
+      results: 'Supported +50% PLG revenue growth year-over-year and helped cross $100M self-serve ARR milestone.'
+    }
   },
   {
     id: 'braintree',
     company: 'Braintree/PayPal',
     title: 'Launched ACH Product',
+    role: 'Product Analytics',
     metrics: [
       { label: 'Market access', value: '$43T', context: 'total addressable market' }
-    ]
+    ],
+    fullContext: {
+      context: 'Launching ACH payment product to access $43 trillion domestic payments market. Needed analytics strategy to track adoption and inform go-to-market.',
+      constraints: null,
+      actions: [
+        'Designed instrumentation strategy for new product line',
+        'Built dashboards tracking merchant adoption and transaction volume',
+        'Supported GTM with data-driven insights'
+      ],
+      results: 'Successful product launch into massive addressable market with robust tracking and reporting infrastructure.'
+    }
   }
 ];
 

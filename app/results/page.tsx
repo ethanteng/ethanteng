@@ -4,9 +4,17 @@ import { MetricCard } from "@/components/metric-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CASE_STUDIES } from "@/lib/site";
-import { Building2 } from "lucide-react";
+import { Building2, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export const metadata: Metadata = {
   title: "Results & Case Studies",
@@ -39,14 +47,66 @@ export default function ResultsPage() {
           <div className="max-w-5xl mx-auto">
             <Card>
               <CardHeader>
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Building2 className="w-6 h-6 text-primary" />
+                <div className="flex items-start justify-between mb-2">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Building2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-3xl">{caseStudy.company}</CardTitle>
+                      <p className="text-muted-foreground">{caseStudy.title}</p>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {caseStudy.role}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <CardTitle className="text-3xl">{caseStudy.company}</CardTitle>
-                    <p className="text-muted-foreground">{caseStudy.title}</p>
-                  </div>
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button variant="outline" size="sm" className="shrink-0">
+                        View full story <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-3xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl">
+                          {caseStudy.company} ({caseStudy.role})
+                        </DialogTitle>
+                        <DialogDescription className="text-lg">
+                          {caseStudy.title}
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-6 pt-4">
+                        <div>
+                          <h4 className="font-semibold text-base mb-2">Context</h4>
+                          <p className="text-muted-foreground text-sm">
+                            {caseStudy.fullContext.context}
+                          </p>
+                        </div>
+                        {caseStudy.fullContext.constraints && (
+                          <div>
+                            <h4 className="font-semibold text-base mb-2">Constraints</h4>
+                            <p className="text-muted-foreground text-sm">
+                              {caseStudy.fullContext.constraints}
+                            </p>
+                          </div>
+                        )}
+                        <div>
+                          <h4 className="font-semibold text-base mb-2">Actions</h4>
+                          <ul className="list-disc list-inside space-y-2 text-muted-foreground text-sm">
+                            {caseStudy.fullContext.actions.map((action, i) => (
+                              <li key={i}>{action}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-base mb-2">Results</h4>
+                          <p className="text-muted-foreground text-sm">
+                            {caseStudy.fullContext.results}
+                          </p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 </div>
               </CardHeader>
               <CardContent>
@@ -117,118 +177,6 @@ export default function ResultsPage() {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </Section>
-
-      {/* Context Section */}
-      <Section className="bg-muted/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-            Full context
-          </h2>
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">meez (VP Growth & Self-Serve)</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Context</h4>
-                  <p className="text-muted-foreground">
-                    Early-stage recipe software company with product-market fit but
-                    no self-serve motion. High-touch sales only, long time-to-value,
-                    unclear activation metrics.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Constraints</h4>
-                  <p className="text-muted-foreground">
-                    Lean team, limited engineering resources, complex product
-                    requiring significant user setup and content migration.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Actions</h4>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li>Instrumented full-funnel tracking from signup to activation to revenue</li>
-                    <li>Designed and shipped personalized onboarding flows based on user role</li>
-                    <li>Built behavioral segmentation to identify and route PQLs to sales</li>
-                    <li>Created lifecycle email campaigns in Intercom tied to product events</li>
-                    <li>Reduced time-to-value from 30+ days to under 1 day through workflow redesign</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Results</h4>
-                  <p className="text-muted-foreground">
-                    Built self-serve revenue from $0 to $1M+ ARR in under 2 years.
-                    50% activation rate and 30% PQL rate within 7 days. Churn reduced
-                    to under 5% in key cohorts.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t pt-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Postman (Growth Data Science)
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Context</h4>
-                  <p className="text-muted-foreground">
-                    Scaling PLG motion from tens of millions to $100M+ self-serve
-                    ARR. Needed sophisticated forecasting, experimentation, and
-                    analytics to support hypergrowth.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Actions</h4>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li>Built free-to-paid conversion forecasts with &lt;5% variance</li>
-                    <li>Designed experimentation framework for growth team</li>
-                    <li>Instrumented behavioral funnels across millions of users</li>
-                    <li>Created dashboards tracking activation, engagement, and revenue</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Results</h4>
-                  <p className="text-muted-foreground">
-                    Supported +50% PLG revenue growth year-over-year and helped cross
-                    $100M self-serve ARR milestone.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="border-t pt-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Braintree/PayPal (Product Analytics)
-              </h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Context</h4>
-                  <p className="text-muted-foreground">
-                    Launching ACH payment product to access $43 trillion domestic
-                    payments market. Needed analytics strategy to track adoption and
-                    inform go-to-market.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Actions</h4>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                    <li>Designed instrumentation strategy for new product line</li>
-                    <li>Built dashboards tracking merchant adoption and transaction volume</li>
-                    <li>Supported GTM with data-driven insights</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Results</h4>
-                  <p className="text-muted-foreground">
-                    Successful product launch into massive addressable market with
-                    robust tracking and reporting infrastructure.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </Section>
