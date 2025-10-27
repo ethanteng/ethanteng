@@ -131,25 +131,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Featured Experience */}
-      <Section className="bg-muted/30">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured Experience
-          </h2>
-          <p className="text-muted-foreground">
-            Track record across high-growth SaaS companies
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {EXPERIENCE.map((exp, index) => (
-            <ExperienceCard key={index} {...exp} />
-          ))}
-        </div>
-      </Section>
-
       {/* Offer Preview */}
-      <Section>
+      <Section className="bg-muted/30">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             How I can help
