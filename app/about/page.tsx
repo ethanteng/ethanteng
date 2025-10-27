@@ -61,7 +61,7 @@ export default function AboutPage() {
                       Currently founding <span className="font-semibold text-foreground">Ask Linc</span>, 
                       building AI tools to help product teams move faster.
                     </p>
-                    <p>
+                    <p className="text-sm md:text-base">
                       Previously: VP Growth at meez ($0→$1M+ self-serve ARR), Growth Data Science 
                       at Postman ($100M+ milestone), and Product roles at Braintree/PayPal, Recurly, and wikiHow.
                     </p>
