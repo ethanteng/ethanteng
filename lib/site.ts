@@ -274,3 +274,86 @@ export const ABOUT = {
   ]
 };
 
+export const CLIENT_PORTFOLIO = [
+  {
+    id: 'navinurses',
+    name: 'Navi Nurses',
+    industry: 'Healthcare',
+    description: 'Redefining private duty nursing across Arizona with a human-centered approach. Navi Nurses provides at-home healthcare services with registered nurses, offering flexible, self-pay care solutions.',
+    image: '/navinurses.png',
+    features: [
+      'Patient Management',
+      'Nurse Scheduling',
+      'Self-Pay Model',
+      'Real-time Availability'
+    ],
+    technologies: [
+      'React',
+      'Next.js',
+      'Node.js',
+      'PostgreSQL',
+      'Tailwind CSS'
+    ]
+  },
+  {
+    id: 'reportinghub',
+    name: 'Reporting Hub',
+    industry: 'Analytics',
+    description: 'White-label insight delivery platform for Power BI. A plug-and-play, no-code portal built on Power BI Embedded with AI-powered BI Genius for creating custom AI agents from semantic models.',
+    image: '/reportinghub.png',
+    features: [
+      'Power BI Embedded',
+      'AI Agent Builder',
+      'White-Label Portal',
+      'Semantic Model Integration'
+    ],
+    technologies: [
+      'Power BI',
+      'Azure',
+      'React',
+      'OpenAI',
+      'TypeScript'
+    ]
+  },
+  {
+    id: 'n2t2',
+    name: 'N2T2',
+    industry: 'FinTech',
+    description: 'Human + AI workforce optimization platform for accounting firms. End-to-end workflows unifying human, financial, and operational planning in a continuous optimization loop.',
+    image: '/n2t2.png',
+    features: [
+      'Capacity Planning',
+      'Workforce Optimization',
+      'Financial Modeling',
+      'Process Automation'
+    ],
+    technologies: [
+      'React',
+      'Next.js',
+      'AI/ML',
+      'Python',
+      'PostgreSQL'
+    ]
+  },
+  {
+    id: 'fluke',
+    name: 'Fluke Calibration',
+    industry: 'Industrial',
+    description: 'Global leader in precision calibration tools for accurate measurements. Fluke Calibration provides industry-leading instruments and software for metrology institutes and calibration labs worldwide.',
+    image: '/fluke.png',
+    features: [
+      'Product Catalog',
+      'Quote Management',
+      'Technical Resources',
+      'Global E-commerce'
+    ],
+    technologies: [
+      'Java',
+      'Spring',
+      'React',
+      'Oracle',
+      'Salesforce'
+    ]
+  }
+];
+
