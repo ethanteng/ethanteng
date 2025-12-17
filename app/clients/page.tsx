@@ -85,23 +85,6 @@ export default function ClientsPage() {
                         ))}
                       </div>
                     </div>
-
-                    {/* Technologies */}
-                    <div className="space-y-2">
-                      <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
-                        Technologies
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {client.technologies.map((tech, tIdx) => (
-                          <span
-                            key={tIdx}
-                            className="text-xs px-2.5 py-1 rounded bg-muted text-muted-foreground font-medium"
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
