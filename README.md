@@ -14,8 +14,6 @@ An AI-powered personal finance assistant designed to answer questions using your
 
 A lot of the engineering work is about making AI trustworthy for financial decisions: canonical financial data, deterministic calculations, source provenance, current market context, retrieval, validation, and keeping calculation separate from inference.
 
-→ **[View the code](https://github.com/ethanteng/finsight)**
-
 ### Navi Nurses
 
 A healthcare staffing platform for private-duty nursing.
