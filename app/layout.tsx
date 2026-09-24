@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SITE } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const title = "Ethan Teng — Founder & Engineering Lead";
+const title = `Ethan Teng — ${SITE.title}`;
 
 export const metadata: Metadata = {
   title: { template: "%s | Ethan Teng", default: title },

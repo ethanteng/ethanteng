@@ -1,60 +1,35 @@
+import Image from "next/image";
 import { WorkShowcase } from "@/components/work-showcase";
-import { BUILD_PRINCIPLES, CAREER } from "@/lib/experience";
+import { CAREER } from "@/lib/experience";
 
 export default function HomePage() {
   return (
     <>
-      <section className="wrap hero">
-        <div className="hero-grid">
-          <div>
-            <p className="eyebrow">Founder &amp; Engineering Lead</p>
-            <h1>
-              I build products.
-              <br />
-              <span>I own the outcome.</span>
-            </h1>
-          </div>
-          <div>
-            <p className="hero-copy">
-              I’m Ethan. I’m building <strong>Uncloud</strong>, my first native
-              App Store app, and <strong>Ask Linc</strong>, an AI-powered
-              personal finance product. I also lead engineering at{" "}
-              <strong>Navi Nurses</strong>, owning the full stack and production
-              outcomes.
-            </p>
-          </div>
-        </div>
+      <section className="wrap hero" aria-labelledby="hero-heading">
+        <p className="eyebrow">Ethan Teng</p>
+        <h1 id="hero-heading">
+          Founder of <span>Ask Linc.</span>
+        </h1>
+        <p className="hero-tagline">AI-powered personal finance.</p>
+        <Image
+          src="/ethan-illustration.png"
+          alt="Illustrated portrait of Ethan Teng"
+          width={1086}
+          height={1448}
+          sizes="(max-width: 700px) 64px, (max-width: 1100px) 144px, 176px"
+          className="hero-portrait"
+          priority
+        />
       </section>
       <WorkShowcase />
-      <section
-        className="wrap approach-section"
-        aria-labelledby="approach-heading"
-      >
-        <div className="section-heading">
-          <h2 id="approach-heading">How I work</h2>
-        </div>
-        <div className="principle-grid">
-          {BUILD_PRINCIPLES.map((item, index) => (
-            <article
-              key={item.title}
-              className="principle"
-              data-reveal
-              data-reveal-delay={index}
-            >
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
       <section className="career-section" aria-labelledby="career-heading">
         <div className="wrap">
           <div className="section-heading">
-            <h2 id="career-heading">Product &amp; growth experience</h2>
+            <h2 id="career-heading">Experience behind the work</h2>
           </div>
           <p className="career-intro">
-            Before building these products, I worked on the decisions that turn
-            software into a business: onboarding, pricing, payments, and growth.
+            Before building these products, I worked on onboarding, pricing,
+            payments, and growth. That experience still shapes how I build.
           </p>
           <div className="career-grid">
             {CAREER.map((job, index) => (
