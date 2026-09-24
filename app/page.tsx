@@ -1,33 +1,25 @@
+import Image from "next/image";
 import { WorkShowcase } from "@/components/work-showcase";
 import { CAREER } from "@/lib/experience";
 
 export default function HomePage() {
   return (
     <>
-      <section className="wrap hero">
-        <div className="hero-grid">
-          <div>
-            <p className="eyebrow">
-              Ethan Teng · Founder &amp; Engineering Lead
-            </p>
-            <h1>
-              Founder of
-              <br />
-              <span>Ask Linc.</span>
-            </h1>
-          </div>
-          <div className="hero-copy">
-            <p>
-              I’m Ethan. I built <strong>Ask Linc</strong>, an AI-powered
-              personal finance product, to help people understand their money
-              and explore the decisions ahead.
-            </p>
-            <p>
-              I also lead engineering at <strong>Navi Nurses</strong> and am
-              building <strong>Uncloud</strong>, my first native App Store app.
-            </p>
-          </div>
-        </div>
+      <section className="wrap hero" aria-labelledby="hero-heading">
+        <p className="eyebrow">Ethan Teng</p>
+        <h1 id="hero-heading">
+          Founder of <span>Ask Linc.</span>
+        </h1>
+        <p className="hero-tagline">AI-powered personal finance.</p>
+        <Image
+          src="/ethan-illustration.png"
+          alt="Illustrated portrait of Ethan Teng"
+          width={1086}
+          height={1448}
+          sizes="(max-width: 700px) 64px, (max-width: 1100px) 144px, 176px"
+          className="hero-portrait"
+          priority
+        />
       </section>
       <WorkShowcase />
       <section className="career-section" aria-labelledby="career-heading">

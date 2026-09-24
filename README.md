@@ -42,7 +42,7 @@ npm run build
 - `app/layout.tsx`: site metadata, illustrated portrait for sharing, navigation, footer, and analytics.
 - `components/resume-pdf.tsx`: two-page resume, served by `/api/generate-resume`.
 
-The homepage is photo-free and keeps one direct link per product. Ethan’s supplied illustration appears on About and in sharing metadata. Personal navigation is Work, About, and Contact; consulting navigation is Services, Case studies, and Contact. The switch uses regular links, so Back, refresh, direct visits, and browsing without JavaScript preserve the mode represented by the URL. The consulting page has one project inquiry action after the services, pricing, and process. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
+The homepage leads with “Founder of Ask Linc.” and “AI-powered personal finance.” beside Ethan’s supplied illustration. Detailed background stays in the project sections and About. The illustration also appears on About and in sharing metadata. There is one direct link per product. Personal navigation is Work, About, and Contact; consulting navigation is Services, Case studies, and Contact. The switch uses regular links, so Back, refresh, direct visits, and browsing without JavaScript preserve the mode represented by the URL. The consulting page has one project inquiry action after the services, pricing, and process. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
 
 ## Routes
 
