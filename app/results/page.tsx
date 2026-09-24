@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
-import { ContactBand } from "@/components/contact-band";
 import { CASE_STUDIES } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -13,8 +12,8 @@ export default function ResultsPage() {
   return (
     <>
       <PageIntro label="Earlier work" title="The work behind the numbers.">
-        Selected product and growth work from before Ask Linc and Navi Nurses.
-        These experiences shape how I build today.
+        Selected product and growth work from before Uncloud, Ask Linc, and Navi
+        Nurses. These experiences shape how I build today.
       </PageIntro>
       <section
         className="wrap content-section detail-list"
@@ -58,7 +57,6 @@ export default function ResultsPage() {
           </article>
         ))}
       </section>
-      <ContactBand />
     </>
   );
 }

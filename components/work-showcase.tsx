@@ -2,18 +2,64 @@ import { ArrowUpRight } from "lucide-react";
 import { CURRENT_WORK } from "@/lib/experience";
 
 export function WorkShowcase() {
-  const [linc, navi] = CURRENT_WORK;
+  const [uncloud, linc, navi] = CURRENT_WORK;
   return (
     <section id="work" className="work-section" aria-labelledby="work-heading">
       <div className="wrap">
         <div className="section-heading">
-          <h2 id="work-heading">What I’m building.</h2>
-          <p className="eyebrow">01 / Current work</p>
+          <h2 id="work-heading">Current work</h2>
         </div>
-        <article id={linc.id} className="project">
+        <article id={uncloud.id} className="project" data-reveal>
           <div className="project-copy">
             <div className="project-topline">
-              <span className="project-number">01</span>
+              <span className="eyebrow subtle">
+                Native app · Personal cloud
+              </span>
+            </div>
+            <h3>{uncloud.company}</h3>
+            <p className="project-role">{uncloud.role}</p>
+            <p className="project-summary">My first native App Store app.</p>
+            <p className="project-detail">
+              I’m building Uncloud to make a personal cloud practical for a
+              household. Files stay on your own storage, with separate accounts,
+              imports from local folders and Dropbox, and sync across your
+              computers.
+            </p>
+            <p className="project-detail">
+              I own the product and engineering: ASP.NET Core, React/TypeScript,
+              SQLite, and integrations for device sync and remote access.
+            </p>
+            <a href={uncloud.url} className="text-link">
+              uncloud.life <ArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+          <figure className="uncloud-panel">
+            <p className="eyebrow">Local-first by design</p>
+            <p className="uncloud-statement">
+              Your computer.
+              <br />
+              Your personal cloud.
+            </p>
+            <dl className="uncloud-facts">
+              <div>
+                <dt>Storage</dt>
+                <dd>Ordinary files on your own drive.</dd>
+              </div>
+              <div>
+                <dt>Household</dt>
+                <dd>Separate accounts and private folders.</dd>
+              </div>
+              <div>
+                <dt>Access</dt>
+                <dd>Browse, sync, and connect remotely.</dd>
+              </div>
+            </dl>
+            <figcaption>Built with .NET, React, and SQLite.</figcaption>
+          </figure>
+        </article>
+        <article id={linc.id} className="project" data-reveal>
+          <div className="project-copy">
+            <div className="project-topline">
               <span className="eyebrow subtle">Personal finance · AI</span>
             </div>
             <h3>{linc.company}</h3>
@@ -26,12 +72,8 @@ export function WorkShowcase() {
               questions in plain language, and explore the decisions ahead. I
               own the product and the engineering behind it.
             </p>
-            <div className="project-tags">
-              <span>AI-powered planning</span>
-              <span>Product &amp; engineering</span>
-            </div>
             <a href={linc.url} className="text-link">
-              Explore Ask Linc <ArrowUpRight aria-hidden="true" />
+              asklinc.com <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
           <figure className="linc-panel">
@@ -67,10 +109,9 @@ export function WorkShowcase() {
             </figcaption>
           </figure>
         </article>
-        <article id={navi.id} className="project">
+        <article id={navi.id} className="project" data-reveal>
           <div className="project-copy">
             <div className="project-topline">
-              <span className="project-number">02</span>
               <span className="eyebrow subtle">
                 Healthcare · Full-stack ownership
               </span>
@@ -90,13 +131,8 @@ export function WorkShowcase() {
               responsible for architecture, releases, and what happens in
               production.
             </p>
-            <div className="project-tags">
-              <span>Web &amp; mobile</span>
-              <span>Cloud &amp; delivery</span>
-              <span>Production ownership</span>
-            </div>
             <a href={navi.url} className="text-link">
-              About Navi Nurses <ArrowUpRight aria-hidden="true" />
+              navinurses.com <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
           <figure className="navi-panel">

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
-import { ContactBand } from "@/components/contact-band";
 import { CLIENT_PORTFOLIO } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -40,16 +37,10 @@ export default function ClientsPage() {
               <span className="eyebrow subtle">{client.industry}</span>
               <h2 className="mt-2">{client.name}</h2>
               <p>{client.description}</p>
-              {client.id === "navinurses" && (
-                <Link className="text-link mt-3" href="/#navi-nurses">
-                  My role at Navi Nurses <ArrowRight aria-hidden="true" />
-                </Link>
-              )}
             </div>
           </article>
         ))}
       </section>
-      <ContactBand />
     </>
   );
 }

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ScrollReveals } from "@/components/scroll-reveals";
 import { Analytics } from "@vercel/analytics/react";
 import { SITE } from "@/lib/site";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ScrollReveals />
         <Analytics />
       </body>
     </html>

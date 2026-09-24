@@ -2,6 +2,20 @@
 // achievements are retained from the existing resume and case studies.
 export const CURRENT_WORK = [
   {
+    id: "uncloud",
+    company: "Uncloud",
+    role: "Creator",
+    url: "https://www.uncloud.life/",
+    description:
+      "My first native App Store app: a local-first personal cloud that keeps household files on computers and storage people already own.",
+    bullets: [
+      "Build my first native App Store app around a local-first personal cloud.",
+      "Build the product with ASP.NET Core, React/TypeScript, and SQLite.",
+      "Support separate household accounts, file browsing, and imports from local folders and Dropbox.",
+      "Integrate Syncthing for device sync and an optional Tailscale-based tunnel for remote access.",
+    ],
+  },
+  {
     id: "ask-linc",
     company: "Ask Linc",
     role: "Founder",

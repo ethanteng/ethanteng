@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
-import { ContactBand } from "@/components/contact-band";
 import { BUILD_PRINCIPLES } from "@/lib/experience";
 
 export const metadata: Metadata = {
@@ -57,15 +54,9 @@ export default function ApproachPage() {
               That ownership includes CI/CD and the ongoing work of keeping the
               platform running for the people using it.
             </p>
-            <div className="link-row">
-              <Link className="text-link" href="/#navi-nurses">
-                See the scope at Navi Nurses <ArrowRight aria-hidden="true" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
-      <ContactBand />
     </>
   );
 }

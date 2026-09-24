@@ -3,13 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
-import { ContactBand } from "@/components/contact-band";
 import { CURRENT_WORK, CAREER } from "@/lib/experience";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ethan Teng: founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, and Stanford computer science graduate with a background in product and growth.",
+    "Ethan Teng: creator of Uncloud, founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, and Stanford computer science graduate.",
 };
 
 export default function AboutPage() {
@@ -38,10 +37,11 @@ export default function AboutPage() {
         <div className="about-copy">
           <h2>I like being close to the work.</h2>
           <p>
-            I’m Ethan, the founder of Ask Linc and Engineering Lead / Founding
-            Engineer at Navi Nurses. Today, that means building an AI-powered
-            personal finance product and owning the technology behind a
-            healthcare staffing platform.
+            I’m Ethan, creator of Uncloud, founder of Ask Linc, and Engineering
+            Lead / Founding Engineer at Navi Nurses. I’m building a local-first
+            personal cloud—my first native App Store app—and an AI-powered
+            finance product while owning the technology behind a healthcare
+            staffing platform.
           </p>
           <p>
             My work spans the full stack: product decisions, APIs, web and
@@ -56,24 +56,15 @@ export default function AboutPage() {
             measure whether the product is working.
           </p>
           <div className="link-row">
-            <Link href="/resume" className="text-link">
-              Read my resume <ArrowRight aria-hidden="true" />
-            </Link>
             <Link href="/results" className="text-link">
               Earlier work &amp; results <ArrowRight aria-hidden="true" />
-            </Link>
-            <Link href="/clients" className="text-link">
-              Selected collaborations <ArrowRight aria-hidden="true" />
             </Link>
           </div>
           <div className="about-note">
             <strong>Currently</strong>
             {CURRENT_WORK.map((work) => (
               <p key={work.id}>
-                <Link className="text-link" href={`/#${work.id}`}>
-                  {work.company}
-                </Link>
-                <br />
+                <strong>{work.company}</strong>
                 <span>{work.role}</span>
               </p>
             ))}
@@ -97,7 +88,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <ContactBand />
     </>
   );
 }
