@@ -33,10 +33,10 @@ npm run build
 - `app/globals.css`: responsive layout, color tokens, typography, focus states, reduced motion, and print styles.
 - `components/work-showcase.tsx`: Uncloud, Ask Linc, and Navi Nurses stories and explanatory product/system diagrams. These are not product screenshots or live financial data.
 - `components/scroll-reveals.tsx`: one-time scroll reveals for off-screen work and career content. The server-rendered page stays visible without JavaScript; reduced-motion preferences and printing show everything without animation.
-- `app/layout.tsx`: site metadata, existing portrait for sharing, navigation, footer, and analytics.
+- `app/layout.tsx`: site metadata, illustrated portrait for sharing, navigation, footer, and analytics.
 - `components/resume-pdf.tsx`: two-page resume, served by `/api/generate-resume`.
 
-The homepage is photo-free and keeps only one direct link per product. The existing portrait remains on About and in sharing metadata. Navigation, contact, and the resume download stay accessible without repeated contact banners. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
+The homepage is photo-free and keeps only one direct link per product. Ethan’s supplied illustration appears on About and in sharing metadata. Navigation, contact, and the resume download stay accessible without repeated contact banners. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
 
 ## Routes
 

@@ -23,14 +23,19 @@ export const metadata: Metadata = {
     title,
     description: SITE.description,
     images: [
-      { url: "/Ethan.JPG", width: 960, height: 1280, alt: "Ethan Teng" },
+      {
+        url: "/ethan-illustration.png",
+        width: 1086,
+        height: 1448,
+        alt: "Illustrated portrait of Ethan Teng",
+      },
     ],
   },
   twitter: {
     card: "summary",
     title,
     description: SITE.description,
-    images: ["/Ethan.JPG"],
+    images: ["/ethan-illustration.png"],
   },
 };
 

@@ -21,10 +21,10 @@ export default function AboutPage() {
       <section className="wrap content-section about-grid">
         <div>
           <Image
-            src="/Ethan.JPG"
-            alt="Ethan Teng"
-            width={960}
-            height={1280}
+            src="/ethan-illustration.png"
+            alt="Illustrated portrait of Ethan Teng"
+            width={1086}
+            height={1448}
             sizes="(max-width: 700px) 384px, 350px"
             className="about-photo"
             priority
