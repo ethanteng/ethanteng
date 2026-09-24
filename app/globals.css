@@ -166,9 +166,9 @@
 }
 .nav-inner {
   min-height: 84px;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
   gap: 2rem;
 }
 .wordmark {
@@ -186,6 +186,7 @@
 .desktop-nav {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 2.25rem;
 }
 .desktop-nav a {
@@ -205,6 +206,37 @@
 }
 .mobile-trigger {
   display: none;
+}
+.mode-switch {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #f0f3f7;
+  gap: 2px;
+}
+.mode-switch a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  transition:
+    background 160ms,
+    color 160ms;
+}
+.mode-switch a:hover {
+  color: var(--foreground);
+  background: #e1e7ef;
+}
+.mode-switch a[aria-current] {
+  color: white;
+  background: var(--foreground);
 }
 .mobile-nav {
   display: flex;
@@ -237,7 +269,7 @@
   font-weight: 600;
 }
 .hero h1 span {
-  color: #51647b;
+  color: var(--primary);
 }
 .hero-copy {
   max-width: 35rem;
@@ -275,7 +307,7 @@
 }
 .project {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -325,157 +357,47 @@
   margin-top: auto;
   padding-top: 1.5rem;
 }
-.linc-panel {
-  background: #f1f5f8;
-  color: var(--foreground);
-  padding: 2.75rem;
+/* Real website captures sit in a restrained browser frame. The entire project
+   shares the one-time scroll reveal, including its image. */
+.project-visual {
+  background: #f3f6fa;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.uncloud-panel {
-  background: #f7f3ee;
-  padding: 2.75rem;
+.browser-preview {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d8e0e9;
+  border-radius: 0.65rem;
+  background: white;
+  box-shadow: 0 12px 28px #1723330c;
+}
+.browser-toolbar {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid #e4e8ef;
+  background: #fff;
+  color: #627085;
+  font-size: 0.6875rem;
 }
-.uncloud-panel .eyebrow {
-  color: #914321;
-}
-.uncloud-statement {
-  font-size: clamp(1.75rem, 2.6vw, 2.125rem);
-  font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.35;
-  margin-block: 1.25rem 2rem;
-}
-.uncloud-facts > div {
-  display: grid;
-  grid-template-columns: 5.5rem 1fr;
-  gap: 1rem;
-  border-top: 1px solid #ddd6cd;
-  padding-block: 1.25rem;
-}
-.uncloud-facts dt {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-.uncloud-facts dd {
-  font-size: 0.875rem;
-  line-height: 1.7;
-  color: #5f605e;
-}
-.uncloud-panel figcaption {
-  color: #5f605e;
-  font-size: 0.75rem;
-  margin-top: 1rem;
-}
-.linc-panel .eyebrow {
-  color: #4a6179;
-}
-.linc-question {
-  font-size: clamp(1.75rem, 2.6vw, 2.125rem);
-  font-weight: 500;
-  letter-spacing: -0.035em;
-  line-height: 1.35;
-  margin-block: 1.25rem 1.5rem;
-  max-width: 23rem;
-  text-wrap: balance;
-}
-.linc-flow {
+.browser-dots {
   display: flex;
-  flex-direction: column;
+  gap: 4px;
 }
-.linc-flow li {
-  display: grid;
-  grid-template-columns: 2rem 1fr;
-  gap: 0.5rem;
-  padding-block: 1rem;
-  border-top: 1px solid #d6dfe8;
+.browser-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ccd4df;
 }
-.linc-flow li > span {
-  font-size: 0.8125rem;
-  color: #4a6179;
-  padding-top: 0.15rem;
-  font-variant-numeric: tabular-nums;
-}
-.linc-flow strong {
-  font-size: 1rem;
-  font-weight: 500;
-}
-.linc-flow p {
-  color: #536273;
-  font-size: 0.875rem;
-  margin-top: 0.2rem;
-}
-.linc-panel figcaption {
-  font-size: 0.75rem;
-  color: #536273;
-  margin-top: 0.75rem;
-}
-.navi-panel {
-  background: #182b44;
-  color: #f5f8ff;
-  padding: 2.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.navi-panel > .eyebrow {
-  color: #bdcce1;
-  margin-bottom: 1.75rem;
-}
-.system-row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;
-}
-.system-node {
-  border: 1px solid #4a607c;
-  background: #203651;
-  border-radius: 0.5rem;
-  padding: 1.15rem 0.8rem;
-  text-align: center;
-}
-.system-node strong {
+.website-screenshot {
   display: block;
-  font-size: 0.9375rem;
-  font-weight: 500;
-}
-.system-node span {
-  display: block;
-  font-size: 0.8125rem;
-  color: #bdcce1;
-  margin-top: 0.3rem;
-}
-.system-connector {
-  width: 1px;
-  height: 1rem;
-  background: #8295ba;
-  margin-inline: auto;
-}
-.system-core {
-  background: #315bb5;
-  color: white;
-  border-color: #6085d0;
-}
-.system-core span {
-  color: #e4edff;
-}
-.system-base {
-  border: 1px dashed #7187a4;
-  border-radius: 0.5rem;
-  padding: 0.9rem;
-  text-align: center;
-  font-size: 0.8125rem;
-  margin-top: 1rem;
-}
-.navi-panel figcaption {
-  font-size: 0.8125rem;
-  color: #bdcce1;
-  margin-top: 1.5rem;
-  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .approach-section {
@@ -543,12 +465,8 @@
   color: var(--muted-foreground);
   max-width: 13rem;
 }
-.career-link {
-  margin-top: 2rem;
-}
 
-/* Consulting has its own home section and a connected set of business pages. */
-.consulting-section,
+/* Consulting pages share pricing and engagement styles. */
 .pricing-section {
   padding-block: 4.5rem;
   background: #f3f6fa;
@@ -556,40 +474,18 @@
   border-bottom: 1px solid var(--border);
   scroll-margin-top: 6rem;
 }
-.consulting-intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: 5rem;
-  align-items: end;
-  margin-bottom: 2.5rem;
-}
-.consulting-intro .eyebrow {
-  color: var(--primary);
-  margin-bottom: 1.25rem;
-}
-.consulting-intro h2 {
-  font-size: clamp(2rem, 3.3vw, 3rem);
-  line-height: 1.2;
-  letter-spacing: -0.045em;
-  font-weight: 600;
-}
-.consulting-description,
 .section-description {
   color: var(--muted-foreground);
   max-width: 42rem;
-}
-.section-description {
   margin-top: -1rem;
   margin-bottom: 2rem;
 }
-.offer-preview-grid,
 .pricing-grid,
 .service-areas {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
-.offer-preview,
 .pricing-card {
   padding: 2rem;
   background: #fff;
@@ -597,7 +493,6 @@
   border-radius: 0.75rem;
   min-width: 0;
 }
-.offer-preview h3,
 .pricing-card h3,
 .service-areas h3,
 .additional-services h3,
@@ -615,7 +510,6 @@
   line-height: 1.35;
   margin-block: 1rem;
 }
-.offer-preview > p:last-child,
 .pricing-summary,
 .service-areas p,
 .additional-services > article > p:last-child,
@@ -623,21 +517,6 @@
 .addons li {
   font-size: 0.9375rem;
   color: var(--muted-foreground);
-}
-.consulting-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-.consulting-bottom p {
-  color: var(--muted-foreground);
-  font-size: 0.9375rem;
-}
-.consulting-bottom strong {
-  font-weight: 500;
-  color: var(--foreground);
 }
 .consulting-nav-border {
   border-bottom: 1px solid var(--border);
@@ -1045,11 +924,6 @@
 }
 
 @media (max-width: 960px) {
-  .consulting-intro {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .offer-preview,
   .pricing-card {
     padding: 1.5rem;
   }
@@ -1063,10 +937,7 @@
   .hero h1 {
     font-size: 3.5rem;
   }
-  .project-copy,
-  .uncloud-panel,
-  .linc-panel,
-  .navi-panel {
+  .project-copy {
     padding: 2rem;
   }
   .principle-grid {
@@ -1080,18 +951,40 @@
     gap: 3rem;
   }
 }
+@media (max-width: 900px) {
+  html {
+    scroll-padding-top: 9rem;
+  }
+  .nav-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem 1rem;
+    padding-block: 0.75rem;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-trigger {
+    display: inline-flex;
+    justify-self: end;
+  }
+  .mode-switch {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .mode-switch a {
+    min-height: 44px;
+  }
+}
 @media (max-width: 700px) {
-  .consulting-section,
   .pricing-section {
     padding-block: 3rem;
   }
-  .offer-preview-grid,
   .service-areas,
   .additional-services,
   .addons ul {
     grid-template-columns: minmax(0, 1fr);
   }
-  .consulting-bottom,
   .consulting-contact {
     flex-direction: column;
     align-items: flex-start;
@@ -1101,15 +994,6 @@
   }
   .wrap {
     width: calc(100% - 2.5rem);
-  }
-  .nav-inner {
-    min-height: 72px;
-  }
-  .desktop-nav {
-    display: none;
-  }
-  .mobile-trigger {
-    display: inline-flex;
   }
   .hero {
     padding-block: 3.5rem 2.5rem;
@@ -1144,11 +1028,11 @@
   .project {
     grid-template-columns: minmax(0, 1fr);
   }
-  .project-copy,
-  .uncloud-panel,
-  .linc-panel,
-  .navi-panel {
+  .project-copy {
     padding: 1.75rem;
+  }
+  .project-visual {
+    padding: 1.25rem;
   }
   .project h3 {
     font-size: 2.3rem;
@@ -1210,15 +1094,6 @@
   }
   .resume-heading {
     flex-direction: column;
-  }
-}
-@media (max-width: 400px) {
-  .system-row,
-  .uncloud-facts > div {
-    grid-template-columns: minmax(0, 1fr);
-  }
-  .uncloud-facts > div {
-    gap: 0.4rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {

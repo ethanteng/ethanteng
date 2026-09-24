@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   title: "Consulting — Services & Pricing",
   description:
     "Ethan Teng Consulting LLC: product, engineering, and growth consulting. $3,000 audits, $10,000/month build-outs, fractional leadership, and $250/hour advice.",
+  openGraph: {
+    title: "Ethan Teng Consulting LLC — Services & Pricing",
+    description:
+      "Product, engineering, and growth consulting. Clear services, pricing, and hands-on delivery.",
+    url: "/services",
+    images: ["/ethan-illustration.png"],
+  },
+  twitter: {
+    card: "summary",
+    title: "Ethan Teng Consulting LLC — Services & Pricing",
+    description:
+      "Product, engineering, and growth consulting. Clear services, pricing, and hands-on delivery.",
+    images: ["/ethan-illustration.png"],
+  },
 };
 
 const areas = [
@@ -134,7 +148,7 @@ export default function ServicesPage() {
               sense.
             </p>
           </div>
-          <Link href="/contact" className="action-link">
+          <Link href="/services/contact" className="action-link">
             Discuss a project <ArrowRight aria-hidden="true" />
           </Link>
         </div>

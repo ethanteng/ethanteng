@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'Ethan Teng',
   company: 'Ethan Teng Consulting LLC',
-  title: 'Ask Linc Founder & Consultant',
-  description: 'Founder of Ask Linc, Engineering Lead at Navi Nurses, and creator of Uncloud. Product, engineering, and growth consulting through Ethan Teng Consulting LLC.',
+  title: 'Ask Linc Founder & Engineering Lead',
+  description: 'Founder of Ask Linc, an AI-powered personal finance product. Engineering Lead / Founding Engineer at Navi Nurses and creator of Uncloud, my first native App Store app.',
   email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
   social: { linkedin: 'https://www.linkedin.com/in/ethanteng', github: 'https://github.com/ethanteng' },

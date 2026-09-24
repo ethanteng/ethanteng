@@ -13,38 +13,32 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-const navigation = [
-  { name: "Work", href: "/#work" },
-  { name: "Consulting", href: "/services" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+import { getSiteMode, MODE_HOME, MODE_NAVIGATION } from "@/lib/site-mode";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const currentState = (href: string) =>
-    pathname === href
-      ? "page"
-      : href === "/services" &&
-          ["/clients", "/results", "/approach"].includes(pathname)
-        ? "true"
-        : undefined;
+  const mode = getSiteMode(pathname);
+  const consulting = mode === "consulting";
+  const navigation = MODE_NAVIGATION[mode];
 
   return (
     <header className="site-header">
-      <nav className="wrap nav-inner" aria-label="Main navigation">
-        <Link href="/" className="wordmark" aria-label="Ethan Teng — Home">
+      <div className="wrap nav-inner">
+        <Link
+          href={MODE_HOME[mode]}
+          className="wordmark"
+          aria-label={`${consulting ? "Ethan Teng Consulting" : "Ethan Teng"} — Home`}
+        >
           <Image src="/icon.svg" alt="" width={25} height={25} />
           Ethan Teng
         </Link>
-        <div className="desktop-nav">
+        <nav className="desktop-nav" aria-label="Main navigation">
           {navigation.map((item) => (
             <Link
-              key={item.name}
+              key={item.href}
               href={item.href}
-              aria-current={currentState(item.href)}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={item.name === "Contact" ? "nav-contact" : undefined}
             >
               {item.name}
@@ -53,7 +47,7 @@ export function Navbar() {
               )}
             </Link>
           ))}
-        </div>
+        </nav>
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild>
             <Button
@@ -66,17 +60,21 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent className="p-7 pt-14">
-            <SheetTitle>Ethan Teng</SheetTitle>
+            <SheetTitle>
+              {consulting ? "Ethan Teng Consulting LLC" : "Ethan Teng"}
+            </SheetTitle>
             <SheetDescription>
-              Ask Linc Founder &amp; Consultant
+              {consulting
+                ? "Product, engineering, and growth"
+                : "Founder of Ask Linc"}
             </SheetDescription>
             <nav className="mobile-nav" aria-label="Mobile navigation">
               {navigation.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  aria-current={currentState(item.href)}
+                  aria-current={pathname === item.href ? "page" : undefined}
                 >
                   {item.name}
                 </Link>
@@ -84,7 +82,23 @@ export function Navbar() {
             </nav>
           </SheetContent>
         </Sheet>
-      </nav>
+        <nav className="mode-switch" aria-label="Site mode">
+          <Link
+            href={MODE_HOME.personal}
+            aria-current={mode === "personal" ? "true" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            Personal
+          </Link>
+          <Link
+            href={MODE_HOME.consulting}
+            aria-current={consulting ? "true" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            Consulting
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }
