@@ -1,53 +1,52 @@
 # Ethan Teng
 
-**Technical founder and engineering lead building AI-native products in finance and healthcare.**
+Personal website for Ethan Teng, Founder of Ask Linc and Engineering Lead / Founding Engineer at Navi Nurses. Current product and engineering work leads the site; earlier product and growth experience provides context.
 
-I build and operate production software end to end — product architecture, backend, web, mobile, infrastructure, AI systems, and the engineering workflows that keep it all shipping reliably.
+## Development
 
-Currently, I'm splitting my time between **[Ask Linc](https://asklinc.com)**, which I'm building as a solo founder, and **Navi Nurses**, where I lead engineering.
+The existing stack is Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, and Vercel Analytics. Use Node.js 20.9+ and npm with the checked-in lockfile.
 
-## What I'm building
+```sh
+npm ci
+npm run dev
+```
 
-### [Ask Linc](https://asklinc.com)
+Open http://localhost:3000. For production:
 
-An AI-powered personal finance assistant designed to answer questions using your actual financial data — not just generate plausible-sounding advice.
+```sh
+npm run build
+npm start
+```
 
-A lot of the engineering work is about making AI trustworthy for financial decisions: canonical financial data, deterministic calculations, source provenance, current market context, retrieval, validation, and keeping calculation separate from inference.
+Validation:
 
-### Navi Nurses
+```sh
+npx tsc --noEmit
+npm run lint
+npm run build
+```
 
-A healthcare staffing platform for private-duty nursing.
+## Content and design
 
-I own the technical stack and production outcomes across backend, web, mobile, infrastructure, CI/CD, and our internal AI-assisted development system.
+- `lib/experience.ts`: current roles, career history, and working principles. Shared by the homepage, about page, web resume, and PDF resume. Current roles intentionally have no inferred start dates.
+- `lib/site.ts`: contact links, historical case studies, and selected collaborations.
+- `app/globals.css`: responsive editorial layout, color tokens, typography, focus states, reduced motion, and print styles.
+- `components/work-showcase.tsx`: Ask Linc and Navi Nurses stories and explanatory product/system diagrams. These are not product screenshots or live financial data.
+- `app/layout.tsx`: site metadata, existing portrait for sharing, navigation, footer, and analytics.
+- `components/resume-pdf.tsx`: two-page resume, served by `/api/generate-resume`.
 
-## How I build
+The site uses the existing portrait, favicon, and client images. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
 
-I'm particularly interested in the layer between **“AI can write code”** and **“AI can reliably ship production software.”**
+## Routes
 
-My development workflow uses AI agents heavily, surrounded by deterministic quality systems: automated PR review, CI gates, testing, staging validation, observability, and production feedback loops.
+- `/`: current work, approach, and earlier career highlights
+- `/about`: background and current roles
+- `/approach`: product judgment, technical ownership, and AI-agent-orchestrated delivery
+- `/resume`: current and previous experience, plus PDF download
+- `/results`: retained historical case studies with expandable detail
+- `/contact`: email, social profiles, and scheduling
+- `/clients`: retained collaboration examples
+- `/services`: working-together context, preserving the existing URL
+- `/legal/privacy`: existing privacy policy
 
-The goal isn't to remove engineering judgment. It's to let a very small team operate with the leverage of a much larger one.
-
-## Things I care about
-
-- AI systems where important facts and calculations are inspectable
-- Agent-driven software development
-- Full-stack product engineering
-- Deterministic systems around probabilistic models
-- Developer tooling and automation
-- Shipping and operating real products, not just prototypes
-
-## Public work
-
-- **[Ask Linc / finsight](https://github.com/ethanteng/finsight)** — AI-powered personal finance built around connected financial data, deterministic calculations, and inspectable reasoning
-- More experiments and side projects below ↓
-
-## Stack
-
-`TypeScript` · `React` · `Next.js` · `React Native` · `.NET / C#` · `Node.js` · `PostgreSQL` · `Azure` · `Render` · `Vercel`
-
-Plus an increasingly unreasonable number of LLMs and agents.
-
----
-
-[Ask Linc](https://asklinc.com) · [LinkedIn](https://www.linkedin.com/in/ethanteng)
+Deployment remains on the repository’s existing Vercel setup. The redesign does not change hosting configuration.

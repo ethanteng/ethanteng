@@ -1,9 +1,12 @@
 export const SITE = {
-  name: 'Ethan Teng Consulting',
+  name: 'Ethan Teng',
+  title: 'Founder & Engineering Lead',
+  description: 'Founder of Ask Linc, an AI-powered personal finance product. Engineering Lead and Founding Engineer at Navi Nurses, owning the full stack from product to production.',
   email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
-  social: { linkedin: 'https://www.linkedin.com/in/ethanteng' },
-  cta: { primary: '/contact', secondary: '/services' }
+  social: { linkedin: 'https://www.linkedin.com/in/ethanteng', github: 'https://github.com/ethanteng' },
+  calendly: 'https://calendly.com/ethanteng-sf/plg',
+  cta: { primary: '/contact', secondary: '/#work' }
 };
 
 export const OFFERS = [
@@ -255,7 +258,7 @@ export const CASE_STUDIES = [
 ];
 
 export const ABOUT = {
-  bio: `Founder @ Ask Linc; PLG product leader with hands-on track record across onboarding, pricing, lifecycle, analytics, and automation. Prior: meez (VP Growth & Self-Serve), Postman (Growth Data Science, >$100M ARR), Braintree/PayPal (Product Analytics, ACH launch), Recurly, wikiHow. BS Stanford.`,
+  bio: `I’m the founder of Ask Linc and the Engineering Lead / Founding Engineer at Navi Nurses. I build products, own the technical stack, and stay responsible for what happens in production. Before this, I led product and growth work at meez, Postman, Recurly, and Braintree/PayPal. I studied computer science at Stanford.`,
   bestAt: [
     'Designing onboarding flows that convert signups into activated users',
     'Building behavioral segmentation and lifecycle campaigns',
@@ -279,7 +282,7 @@ export const CLIENT_PORTFOLIO = [
     id: 'navinurses',
     name: 'Navi Nurses',
     industry: 'Healthcare',
-    description: 'Redefining private duty nursing across Arizona with a human-centered approach. Navi Nurses provides at-home healthcare services with registered nurses, offering flexible, self-pay care solutions.',
+    description: 'Engineering Lead / Founding Engineer for the healthcare staffing platform behind Navi Nurses. I own the full technical stack and production outcomes across APIs, web, mobile, chat, and cloud infrastructure.',
     image: '/navinurses.png',
     features: [
       'Patient Management',
@@ -288,11 +291,11 @@ export const CLIENT_PORTFOLIO = [
       'Real-time Availability'
     ],
     technologies: [
+      '.NET / XAF APIs',
       'React',
-      'Next.js',
-      'Node.js',
-      'PostgreSQL',
-      'Tailwind CSS'
+      'React Native',
+      'Chat',
+      'Azure / CI/CD'
     ]
   },
   {
@@ -356,4 +359,3 @@ export const CLIENT_PORTFOLIO = [
     ]
   }
 ];
-

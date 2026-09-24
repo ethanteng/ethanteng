@@ -18,7 +18,7 @@ export default function PrivacyPage() {
 
         <h2>Overview</h2>
         <p>
-          {SITE.name} ("we", "us", or "our") respects your privacy. This policy
+          Ethan Teng Consulting (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your privacy. This policy
           describes how we collect, use, and protect your personal information.
         </p>
 
@@ -74,4 +74,3 @@ export default function PrivacyPage() {
     </Section>
   );
 }
-
