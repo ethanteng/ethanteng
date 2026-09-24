@@ -1,6 +1,6 @@
 # Ethan Teng
 
-Personal website for Ethan Teng, creator of Uncloud, Founder of Ask Linc, and Engineering Lead / Founding Engineer at Navi Nurses. Current product and engineering work leads the site; earlier product and growth experience provides context.
+Personal and business website for Ethan Teng: Founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, creator of Uncloud, and the person behind Ethan Teng Consulting LLC. The homepage leads with Ask Linc, then Navi Nurses and Uncloud, followed by a dedicated consulting and pricing section.
 
 ## Development
 
@@ -29,25 +29,28 @@ npm run build
 ## Content and design
 
 - `lib/experience.ts`: current roles, career history, and working principles. Shared by the homepage, about page, web resume, and PDF resume. Current roles intentionally have no inferred start dates.
-- `lib/site.ts`: contact links, historical case studies, and selected collaborations.
+- `lib/site.ts`: business identity, contact links, services, prices, add-ons, historical case studies, and selected collaborations. The homepage and services page share the original offer and pricing data.
 - `app/globals.css`: responsive layout, color tokens, typography, focus states, reduced motion, and print styles.
-- `components/work-showcase.tsx`: Uncloud, Ask Linc, and Navi Nurses stories and explanatory product/system diagrams. These are not product screenshots or live financial data.
+- `components/work-showcase.tsx`: Ask Linc, Navi Nurses, and Uncloud stories and explanatory product/system diagrams. These are not product screenshots or live financial data.
+- `components/consulting-overview.tsx`: homepage introduction to Ethan Teng Consulting LLC, with the three original packages and hourly rate.
+- `components/consulting-nav.tsx`: navigation between services, case studies, collaborations, and approach.
+- `components/price-card.tsx`: server-rendered offer details, without repeated calls to action.
 - `components/scroll-reveals.tsx`: one-time scroll reveals for off-screen work and career content. The server-rendered page stays visible without JavaScript; reduced-motion preferences and printing show everything without animation.
 - `app/layout.tsx`: site metadata, illustrated portrait for sharing, navigation, footer, and analytics.
 - `components/resume-pdf.tsx`: two-page resume, served by `/api/generate-resume`.
 
-The homepage is photo-free and keeps only one direct link per product. Ethan’s supplied illustration appears on About and in sharing metadata. Navigation, contact, and the resume download stay accessible without repeated contact banners. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
+The homepage is photo-free and keeps one direct link per product, plus paths to consulting details and case studies. Ethan’s supplied illustration appears on About and in sharing metadata. The primary navigation is Work, Consulting, About, and Contact. The consulting page has one project inquiry action after the services, pricing, and process. No new runtime dependencies or environment variables are needed. Contact uses direct email and the existing Calendly booking link.
 
 ## Routes
 
-- `/`: current work, approach, and earlier career highlights
+- `/`: Ask Linc first, current work, consulting packages and pricing, and earlier career highlights
 - `/about`: background and current roles
 - `/approach`: product judgment, technical ownership, and AI-agent-orchestrated delivery
 - `/resume`: current and previous experience, plus PDF download
 - `/results`: retained historical case studies with expandable detail
-- `/contact`: email, social profiles, and scheduling
+- `/contact`: personal and business inquiries by email or scheduling
 - `/clients`: retained collaboration examples
-- `/services`: working-together context, preserving the existing URL
+- `/services`: Ethan Teng Consulting LLC services, full pricing and deliverables, hourly advice, custom projects, add-ons, and engagement process
 - `/legal/privacy`: existing privacy policy
 
 Deployment remains on the repository’s existing Vercel setup. The redesign does not change hosting configuration.

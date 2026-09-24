@@ -231,7 +231,7 @@
   margin-bottom: 1.75rem;
 }
 .hero h1 {
-  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-size: clamp(2.75rem, 4.4vw, 4rem);
   line-height: 1.12;
   letter-spacing: -0.055em;
   font-weight: 600;
@@ -249,6 +249,9 @@
 .hero-copy strong {
   color: var(--foreground);
   font-weight: 500;
+}
+.hero-copy p + p {
+  margin-top: 1.2rem;
 }
 
 .work-section {
@@ -540,6 +543,233 @@
   color: var(--muted-foreground);
   max-width: 13rem;
 }
+.career-link {
+  margin-top: 2rem;
+}
+
+/* Consulting has its own home section and a connected set of business pages. */
+.consulting-section,
+.pricing-section {
+  padding-block: 4.5rem;
+  background: #f3f6fa;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 6rem;
+}
+.consulting-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 5rem;
+  align-items: end;
+  margin-bottom: 2.5rem;
+}
+.consulting-intro .eyebrow {
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+.consulting-intro h2 {
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+.consulting-description,
+.section-description {
+  color: var(--muted-foreground);
+  max-width: 42rem;
+}
+.section-description {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+.offer-preview-grid,
+.pricing-grid,
+.service-areas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.offer-preview,
+.pricing-card {
+  padding: 2rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  min-width: 0;
+}
+.offer-preview h3,
+.pricing-card h3,
+.service-areas h3,
+.additional-services h3,
+.addons h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.4;
+}
+.offer-price {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 500;
+  color: var(--foreground);
+  letter-spacing: -0.04em;
+  line-height: 1.35;
+  margin-block: 1rem;
+}
+.offer-preview > p:last-child,
+.pricing-summary,
+.service-areas p,
+.additional-services > article > p:last-child,
+.addons > p,
+.addons li {
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+}
+.consulting-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.consulting-bottom p {
+  color: var(--muted-foreground);
+  font-size: 0.9375rem;
+}
+.consulting-bottom strong {
+  font-weight: 500;
+  color: var(--foreground);
+}
+.consulting-nav-border {
+  border-bottom: 1px solid var(--border);
+}
+.consulting-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 2rem;
+  padding-block: 0.75rem;
+}
+.consulting-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+.consulting-nav a:hover,
+.consulting-nav a[aria-current] {
+  color: var(--primary);
+}
+.consulting-nav a[aria-current] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.service-areas article {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+.service-areas p {
+  margin-top: 0.75rem;
+}
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  scroll-margin-top: 6rem;
+}
+.pricing-format {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  margin-top: 1rem;
+}
+.pricing-card ul {
+  list-style: disc;
+  padding-left: 1rem;
+  margin-block: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+.pricing-card li {
+  padding-left: 0.2rem;
+  margin-top: 0.6rem;
+  line-height: 1.7;
+}
+.pricing-card li::marker,
+.addons li::marker {
+  color: var(--primary);
+}
+.pricing-fit {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+}
+.pricing-fit strong {
+  display: block;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+.additional-services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.additional-services article {
+  padding-top: 1.5rem;
+  border-top: 1px solid #cad4e1;
+}
+.additional-price {
+  font-size: 1.5rem;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  margin-block: 0.5rem;
+}
+.addons {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #cad4e1;
+}
+.addons > p {
+  margin-top: 0.5rem;
+}
+.addons ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 3rem;
+  padding-left: 1rem;
+  list-style: disc;
+  margin-top: 1.25rem;
+}
+.step-number {
+  display: block;
+  color: var(--primary);
+  font-size: 0.8125rem;
+  margin-bottom: 1rem;
+}
+.consulting-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border);
+}
+.consulting-contact h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.consulting-contact p {
+  color: var(--muted-foreground);
+  font-size: 0.9375rem;
+  margin-top: 0.5rem;
+}
+.consulting-contact .action-link {
+  flex-shrink: 0;
+}
 .site-footer {
   border-top: 1px solid var(--border);
 }
@@ -815,6 +1045,17 @@
 }
 
 @media (max-width: 960px) {
+  .consulting-intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .offer-preview,
+  .pricing-card {
+    padding: 1.5rem;
+  }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
   .hero-grid {
     gap: 3rem;
     grid-template-columns: 1fr;
@@ -840,6 +1081,24 @@
   }
 }
 @media (max-width: 700px) {
+  .consulting-section,
+  .pricing-section {
+    padding-block: 3rem;
+  }
+  .offer-preview-grid,
+  .service-areas,
+  .additional-services,
+  .addons ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .consulting-bottom,
+  .consulting-contact {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .additional-services {
+    gap: 2rem;
+  }
   .wrap {
     width: calc(100% - 2.5rem);
   }

@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { ConsultingNav } from "@/components/consulting-nav";
 import { CASE_STUDIES } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Earlier work & results",
   description:
-    "Selected product and growth work at meez, Postman, Recurly, and Braintree/PayPal. The experience behind Ethan Teng’s approach to building products.",
+    "Selected product and growth work at meez, Postman, Recurly, and Braintree/PayPal. The experience behind Ethan Teng’s products and consulting practice.",
 };
 
 export default function ResultsPage() {
   return (
     <>
       <PageIntro label="Earlier work" title="The work behind the numbers.">
-        Selected product and growth work from before Uncloud, Ask Linc, and Navi
-        Nurses. These experiences shape how I build today.
+        Selected results from earlier roles at meez, Postman, Recurly, and
+        Braintree/PayPal. This experience shapes my products and consulting work
+        today.
       </PageIntro>
+      <ConsultingNav current="/results" />
       <section
         className="wrap content-section detail-list"
         aria-label="Career case studies"

@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Ethan Teng about products, engineering, Ask Linc, or working together.",
+    "Contact Ethan Teng about Ask Linc or product, engineering, and growth engagements through Ethan Teng Consulting LLC.",
 };
 
 export default function ContactPage() {
@@ -16,8 +16,8 @@ export default function ContactPage() {
         label="Get in touch"
         title="Let’s talk about what you’re building."
       >
-        Have a question about my work, a product idea, or a reason we should
-        connect? Send me a note.
+        For consulting through {SITE.company}, or a question about Ask Linc and
+        my other work, send me a note.
       </PageIntro>
       <section className="wrap content-section contact-grid">
         <div>
@@ -26,8 +26,8 @@ export default function ContactPage() {
             <ArrowUpRight aria-hidden="true" />
           </a>
           <p>
-            A little context goes a long way: what you’re working on, where
-            you’re stuck, and what you have in mind.
+            Tell me what you’re working on, where you’re stuck, and your
+            timeline. If you have an engagement in mind, include that too.
           </p>
         </div>
         <div>

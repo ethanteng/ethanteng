@@ -4,11 +4,12 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageIntro } from "@/components/page-intro";
 import { CURRENT_WORK, CAREER } from "@/lib/experience";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ethan Teng: creator of Uncloud, founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, and Stanford computer science graduate.",
+    "Ethan Teng: founder of Ask Linc, Engineering Lead at Navi Nurses, creator of Uncloud, and the person behind Ethan Teng Consulting LLC.",
 };
 
 export default function AboutPage() {
@@ -37,11 +38,10 @@ export default function AboutPage() {
         <div className="about-copy">
           <h2>I like being close to the work.</h2>
           <p>
-            I’m Ethan, creator of Uncloud, founder of Ask Linc, and Engineering
-            Lead / Founding Engineer at Navi Nurses. I’m building a local-first
-            personal cloud—my first native App Store app—and an AI-powered
-            finance product while owning the technology behind a healthcare
-            staffing platform.
+            I’m Ethan, founder of Ask Linc, an AI-powered personal finance
+            product I built. I’m also the Engineering Lead / Founding Engineer
+            at Navi Nurses, and I’m building Uncloud, a personal cloud and my
+            first native App Store app.
           </p>
           <p>
             My work spans the full stack: product decisions, APIs, web and
@@ -50,12 +50,20 @@ export default function AboutPage() {
             result.
           </p>
           <p>
+            I run {SITE.company}, working directly with founders and teams on
+            product development, engineering, and growth. I bring the same
+            hands-on approach to client work that I use in my own products.
+          </p>
+          <p>
             Earlier, I led product and growth work at meez, Postman, Recurly,
             and Braintree/PayPal. That experience still shapes how I build:
             understand what people need, make the path to value clearer, and
             measure whether the product is working.
           </p>
           <div className="link-row">
+            <Link href="/services" className="text-link">
+              Consulting services <ArrowRight aria-hidden="true" />
+            </Link>
             <Link href="/results" className="text-link">
               Earlier work &amp; results <ArrowRight aria-hidden="true" />
             </Link>

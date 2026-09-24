@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { PageIntro } from "@/components/page-intro";
+import { ConsultingNav } from "@/components/consulting-nav";
 import { CLIENT_PORTFOLIO } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function ClientsPage() {
         Work across healthcare, analytics, financial technology, and enterprise
         software.
       </PageIntro>
+      <ConsultingNav current="/clients" />
       <section
         className="wrap content-section consulting-grid"
         aria-label="Selected collaborations"

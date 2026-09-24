@@ -1,5 +1,9 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { WorkShowcase } from "@/components/work-showcase";
-import { BUILD_PRINCIPLES, CAREER } from "@/lib/experience";
+import { ConsultingOverview } from "@/components/consulting-overview";
+import { CAREER } from "@/lib/experience";
+import { SITE } from "@/lib/site";
 
 export default function HomePage() {
   return (
@@ -7,54 +11,37 @@ export default function HomePage() {
       <section className="wrap hero">
         <div className="hero-grid">
           <div>
-            <p className="eyebrow">Founder &amp; Engineering Lead</p>
+            <p className="eyebrow">Ethan Teng · Founder &amp; Consultant</p>
             <h1>
-              I build products.
+              Founder of Ask Linc.
               <br />
-              <span>I own the outcome.</span>
+              <span>Hands-on consultant.</span>
             </h1>
           </div>
-          <div>
-            <p className="hero-copy">
-              I’m Ethan. I’m building <strong>Uncloud</strong>, my first native
-              App Store app, and <strong>Ask Linc</strong>, an AI-powered
-              personal finance product. I also lead engineering at{" "}
-              <strong>Navi Nurses</strong>, owning the full stack and production
-              outcomes.
+          <div className="hero-copy">
+            <p>
+              I built <strong>Ask Linc</strong> to make personal finance easier
+              to understand. I also lead engineering at{" "}
+              <strong>Navi Nurses</strong> and am building{" "}
+              <strong>Uncloud</strong>, my first native App Store app.
+            </p>
+            <p>
+              Through <strong>{SITE.company}</strong>, I help teams build
+              products and improve growth.
             </p>
           </div>
         </div>
       </section>
       <WorkShowcase />
-      <section
-        className="wrap approach-section"
-        aria-labelledby="approach-heading"
-      >
-        <div className="section-heading">
-          <h2 id="approach-heading">How I work</h2>
-        </div>
-        <div className="principle-grid">
-          {BUILD_PRINCIPLES.map((item, index) => (
-            <article
-              key={item.title}
-              className="principle"
-              data-reveal
-              data-reveal-delay={index}
-            >
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ConsultingOverview />
       <section className="career-section" aria-labelledby="career-heading">
         <div className="wrap">
           <div className="section-heading">
-            <h2 id="career-heading">Product &amp; growth experience</h2>
+            <h2 id="career-heading">Experience behind the work</h2>
           </div>
           <p className="career-intro">
-            Before building these products, I worked on the decisions that turn
-            software into a business: onboarding, pricing, payments, and growth.
+            Selected results from my previous roles. This is the product and
+            growth experience I bring to client engagements.
           </p>
           <div className="career-grid">
             {CAREER.map((job, index) => (
@@ -71,6 +58,9 @@ export default function HomePage() {
               </article>
             ))}
           </div>
+          <Link href="/results" className="text-link career-link">
+            Read the case studies <ArrowRight aria-hidden="true" />
+          </Link>
         </div>
       </section>
     </>

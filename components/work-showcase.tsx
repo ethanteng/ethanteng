@@ -2,61 +2,13 @@ import { ArrowUpRight } from "lucide-react";
 import { CURRENT_WORK } from "@/lib/experience";
 
 export function WorkShowcase() {
-  const [uncloud, linc, navi] = CURRENT_WORK;
+  const [linc, navi, uncloud] = CURRENT_WORK;
   return (
     <section id="work" className="work-section" aria-labelledby="work-heading">
       <div className="wrap">
         <div className="section-heading">
-          <h2 id="work-heading">Current work</h2>
+          <h2 id="work-heading">What I’m building</h2>
         </div>
-        <article id={uncloud.id} className="project" data-reveal>
-          <div className="project-copy">
-            <div className="project-topline">
-              <span className="eyebrow subtle">
-                Native app · Personal cloud
-              </span>
-            </div>
-            <h3>{uncloud.company}</h3>
-            <p className="project-role">{uncloud.role}</p>
-            <p className="project-summary">My first native App Store app.</p>
-            <p className="project-detail">
-              I’m building Uncloud to make a personal cloud practical for a
-              household. Files stay on your own storage, with separate accounts,
-              imports from local folders and Dropbox, and sync across your
-              computers.
-            </p>
-            <p className="project-detail">
-              I own the product and engineering: ASP.NET Core, React/TypeScript,
-              SQLite, and integrations for device sync and remote access.
-            </p>
-            <a href={uncloud.url} className="text-link">
-              uncloud.life <ArrowUpRight aria-hidden="true" />
-            </a>
-          </div>
-          <figure className="uncloud-panel">
-            <p className="eyebrow">Local-first by design</p>
-            <p className="uncloud-statement">
-              Your computer.
-              <br />
-              Your personal cloud.
-            </p>
-            <dl className="uncloud-facts">
-              <div>
-                <dt>Storage</dt>
-                <dd>Ordinary files on your own drive.</dd>
-              </div>
-              <div>
-                <dt>Household</dt>
-                <dd>Separate accounts and private folders.</dd>
-              </div>
-              <div>
-                <dt>Access</dt>
-                <dd>Browse, sync, and connect remotely.</dd>
-              </div>
-            </dl>
-            <figcaption>Built with .NET, React, and SQLite.</figcaption>
-          </figure>
-        </article>
         <article id={linc.id} className="project" data-reveal>
           <div className="project-copy">
             <div className="project-topline">
@@ -167,6 +119,54 @@ export function WorkShowcase() {
             <figcaption>
               One connected platform. End-to-end responsibility.
             </figcaption>
+          </figure>
+        </article>
+        <article id={uncloud.id} className="project" data-reveal>
+          <div className="project-copy">
+            <div className="project-topline">
+              <span className="eyebrow subtle">
+                Native app · Personal cloud
+              </span>
+            </div>
+            <h3>{uncloud.company}</h3>
+            <p className="project-role">{uncloud.role}</p>
+            <p className="project-summary">My first native App Store app.</p>
+            <p className="project-detail">
+              I’m building Uncloud to make a personal cloud practical for a
+              household. Files stay on your own storage, with separate accounts,
+              imports from local folders and Dropbox, and sync across your
+              computers.
+            </p>
+            <p className="project-detail">
+              I own the product and engineering: ASP.NET Core, React/TypeScript,
+              SQLite, and integrations for device sync and remote access.
+            </p>
+            <a href={uncloud.url} className="text-link">
+              uncloud.life <ArrowUpRight aria-hidden="true" />
+            </a>
+          </div>
+          <figure className="uncloud-panel">
+            <p className="eyebrow">Local-first by design</p>
+            <p className="uncloud-statement">
+              Your computer.
+              <br />
+              Your personal cloud.
+            </p>
+            <dl className="uncloud-facts">
+              <div>
+                <dt>Storage</dt>
+                <dd>Ordinary files on your own drive.</dd>
+              </div>
+              <div>
+                <dt>Household</dt>
+                <dd>Separate accounts and private folders.</dd>
+              </div>
+              <div>
+                <dt>Access</dt>
+                <dd>Browse, sync, and connect remotely.</dd>
+              </div>
+            </dl>
+            <figcaption>Built with .NET, React, and SQLite.</figcaption>
           </figure>
         </article>
       </div>

@@ -5,7 +5,9 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="wrap footer-inner">
-        <p>© {new Date().getFullYear()} Ethan Teng</p>
+        <p>
+          © {new Date().getFullYear()} {SITE.company}
+        </p>
         <nav className="footer-links" aria-label="Footer navigation">
           <a href={SITE.social.linkedin}>LinkedIn</a>
           <a href={SITE.social.github}>GitHub</a>

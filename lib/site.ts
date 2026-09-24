@@ -1,7 +1,8 @@
 export const SITE = {
   name: 'Ethan Teng',
-  title: 'Founder & Engineering Lead',
-  description: 'Creator of Uncloud, founder of Ask Linc, and Engineering Lead / Founding Engineer at Navi Nurses. Building products and owning the full stack from idea to production.',
+  company: 'Ethan Teng Consulting LLC',
+  title: 'Ask Linc Founder & Consultant',
+  description: 'Founder of Ask Linc, Engineering Lead at Navi Nurses, and creator of Uncloud. Product, engineering, and growth consulting through Ethan Teng Consulting LLC.',
   email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
   social: { linkedin: 'https://www.linkedin.com/in/ethanteng', github: 'https://github.com/ethanteng' },
@@ -13,6 +14,7 @@ export const OFFERS = [
   {
     id: 'audit',
     title: 'Quick Wins Audit',
+    summary: 'Find the biggest gaps in your funnel and leave with a clear plan.',
     price: '$3,000',
     duration: '2 weeks',
     format: 'Async + 1 live session',
@@ -27,6 +29,7 @@ export const OFFERS = [
   {
     id: 'buildout',
     title: 'Growth Engine Build-out',
+    summary: 'Hands-on implementation across onboarding, lifecycle, and analytics.',
     price: '$10,000 / month',
     duration: '~20 hrs/week',
     bullets: [
@@ -41,6 +44,7 @@ export const OFFERS = [
   {
     id: 'fractional',
     title: 'Fractional Head of Growth',
+    summary: 'Senior growth leadership for your team, roadmap, and next stage.',
     price: 'Custom',
     bullets: [
       'Cross-functional planning (Product, Marketing, Execs)',

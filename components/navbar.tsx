@@ -16,7 +16,7 @@ import {
 
 const navigation = [
   { name: "Work", href: "/#work" },
-  { name: "Approach", href: "/approach" },
+  { name: "Consulting", href: "/services" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -24,6 +24,13 @@ const navigation = [
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const currentState = (href: string) =>
+    pathname === href
+      ? "page"
+      : href === "/services" &&
+          ["/clients", "/results", "/approach"].includes(pathname)
+        ? "true"
+        : undefined;
 
   return (
     <header className="site-header">
@@ -37,7 +44,7 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              aria-current={pathname === item.href ? "page" : undefined}
+              aria-current={currentState(item.href)}
               className={item.name === "Contact" ? "nav-contact" : undefined}
             >
               {item.name}
@@ -60,14 +67,16 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent className="p-7 pt-14">
             <SheetTitle>Ethan Teng</SheetTitle>
-            <SheetDescription>Founder &amp; Engineering Lead</SheetDescription>
+            <SheetDescription>
+              Ask Linc Founder &amp; Consultant
+            </SheetDescription>
             <nav className="mobile-nav" aria-label="Mobile navigation">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  aria-current={pathname === item.href ? "page" : undefined}
+                  aria-current={currentState(item.href)}
                 >
                   {item.name}
                 </Link>

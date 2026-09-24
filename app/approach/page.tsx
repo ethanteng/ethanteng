@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { ConsultingNav } from "@/components/consulting-nav";
 import { BUILD_PRINCIPLES } from "@/lib/experience";
 
 export const metadata: Metadata = {
@@ -15,8 +16,10 @@ export default function ApproachPage() {
         label="How I work"
         title="From product judgment to production."
       >
-        I stay close to the problem, the code, and the people who depend on it.
+        In my own products and consulting work, I stay close to the problem, the
+        code, and the people who depend on it.
       </PageIntro>
+      <ConsultingNav current="/approach" />
       <section
         className="wrap content-section detail-list"
         aria-label="Working principles"
