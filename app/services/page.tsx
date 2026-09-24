@@ -1,191 +1,50 @@
 import type { Metadata } from "next";
-import { Section } from "@/components/section";
-import { PriceCard } from "@/components/price-card";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { OFFERS, ADDONS, ADHOC } from "@/lib/site";
-import { ArrowRight, Check } from "lucide-react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { PageIntro } from "@/components/page-intro";
 
 export const metadata: Metadata = {
-  title: "Services & Pricing",
+  title: "Working together",
   description:
-    "Choose from Quick Wins Audit, Growth Engine Build-out, Fractional Head of Growth, and custom engagements. Transparent pricing for PLG growth consulting.",
+    "Ethan Teng’s work across product building, engineering leadership, and product growth.",
 };
 
-const processSteps = [
+const areas = [
   {
-    title: "Discovery",
-    description: "Understand your business, goals, and current state",
-    color: "from-blue-500 to-indigo-600",
+    title: "Building a product",
+    text: "Turning a problem into a working product, with the product decisions and technical implementation connected from the start.",
   },
   {
-    title: "Diagnostics",
-    description: "Analyze data, identify gaps, and prioritize opportunities",
-    color: "from-purple-500 to-pink-600",
+    title: "Owning the engineering",
+    text: "Connecting APIs, web, mobile, and infrastructure, with responsibility for delivery and production outcomes.",
   },
   {
-    title: "Design",
-    description: "Create detailed plans and implementation roadmaps",
-    color: "from-green-500 to-emerald-600",
-  },
-  {
-    title: "Ship",
-    description: "Build and launch with your team, hands-on",
-    color: "from-amber-500 to-orange-600",
-  },
-  {
-    title: "Measure",
-    description: "Track results, iterate, and optimize continuously",
-    color: "from-cyan-500 to-blue-600",
+    title: "Making the product work as a business",
+    text: "Onboarding, pricing, lifecycle, and analytics, informed by hands-on growth experience at meez, Postman, and Recurly.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      <Section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-700 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <Badge className="mb-4 bg-white/20 text-white border-white/40">Services & Pricing</Badge>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Growth services designed for early-stage SaaS
-          </h1>
-          <p className="text-lg text-gray-100">
-            Transparent pricing, clear deliverables, and hands-on execution.
-            Choose the engagement that fits your stage and needs.
-          </p>
-        </div>
-      </Section>
-
-      {/* Core Offers */}
-      <Section>
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Offers</h2>
-          <p className="text-muted-foreground">
-            Three proven engagement models for different stages
-          </p>
-        </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {OFFERS.map((offer, index) => (
-            <PriceCard key={offer.id} {...offer} featured={index === 1} />
-          ))}
-        </div>
-
-        {/* Additional Options & Add-ons */}
-        <div className="max-w-7xl mx-auto mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {/* Equity-Based */}
-            <Card className="bg-muted/50">
-              <CardContent className="p-4">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="text-lg font-bold mb-1.5">
-                      Equity-based engagements
-                    </h3>
-                    <Badge variant="outline" className="mb-2 text-xs">
-                      Limited availability
-                    </Badge>
-                  </div>
-                  <span className="text-lg font-bold text-primary">Custom</span>
-                </div>
-                <p className="text-muted-foreground text-xs mb-2 leading-relaxed">
-                  I take on one equity client at a time, typically mirroring the
-                  Build-out or Fractional engagement structure. Requires strong
-                  founder fit and clear value exchange.
-                </p>
-                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded p-2">
-                  <p className="text-xs text-yellow-800 dark:text-yellow-200">
-                    <strong>June 2025 update:</strong> Not taking new equity clients
-                    at this time.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Ad-hoc */}
-            <Card className="bg-muted/50">
-              <CardContent className="p-4">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="text-lg font-bold mb-1.5">Ad-hoc consulting</h3>
-                    <Badge variant="outline" className="mb-2 text-xs">
-                      Limited spots
-                    </Badge>
-                  </div>
-                  <span className="text-lg font-bold text-primary">
-                    {ADHOC.rate}
-                  </span>
-                </div>
-                <p className="text-muted-foreground text-xs leading-relaxed">{ADHOC.note}</p>
-              </CardContent>
-            </Card>
-
-            {/* Add-ons */}
-            <Card className="bg-muted/50">
-              <CardContent className="p-4">
-                <h3 className="text-lg font-bold mb-2">Add-ons</h3>
-                <p className="text-muted-foreground text-xs mb-2">
-                  Enhance any engagement:
-                </p>
-                <div className="space-y-2">
-                  {ADDONS.map((addon, index) => (
-                    <div key={index} className="flex items-start space-x-2">
-                      <Check className="h-3.5 w-3.5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-xs leading-relaxed">{addon}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </Section>
-
-      {/* What to Expect */}
-      <Section className="bg-muted/30">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center">
-            What to expect
-          </h2>
-          <p className="text-muted-foreground text-center mb-8">
-            A structured approach to delivering results
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {processSteps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className={`flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br ${step.color} text-white text-base font-bold mb-4 shadow-md`}>
-                  {index + 1}
-                </div>
-                <h3 className="font-semibold mb-2 text-lg">{step.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* CTA */}
-      <Section className="bg-gradient-to-b from-background to-primary/5">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to accelerate your growth?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Let's talk about your biggest growth blockers and which engagement
-            makes sense for your stage.
-          </p>
-          <Button asChild size="lg">
-            <Link href="/contact">
-              Book a consult <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </Section>
+      <PageIntro
+        label="Working together"
+        title="Product thinking. Hands-on engineering."
+      >
+        My current focus is Uncloud, Ask Linc, and Navi Nurses. If there’s a fit
+        for something you’re building, tell me about it.
+      </PageIntro>
+      <section
+        className="wrap content-section detail-list"
+        aria-label="Areas of experience"
+      >
+        {areas.map((area) => (
+          <article className="detail-row" key={area.title}>
+            <h2>{area.title}</h2>
+            <div>
+              <p>{area.text}</p>
+            </div>
+          </article>
+        ))}
+      </section>
     </>
   );
 }
-

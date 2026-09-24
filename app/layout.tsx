@@ -3,69 +3,57 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { ScrollReveals } from "@/components/scroll-reveals";
 import { Analytics } from "@vercel/analytics/react";
+import { SITE } from "@/lib/site";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const title = "Ethan Teng — Founder & Engineering Lead";
 
 export const metadata: Metadata = {
-  title: {
-    template: "%s | Ethan Teng Consulting",
-    default: "Ethan Teng Consulting — PLG Growth & Self-Serve Revenue",
-  },
-  description:
-    "Turn traction into self-serve revenue. Onboarding, activation, lifecycle, and growth systems that scale.",
-  keywords: [
-    "PLG",
-    "product-led growth",
-    "self-serve revenue",
-    "SaaS growth",
-    "onboarding",
-    "activation",
-    "growth consultant",
-  ],
-  authors: [{ name: "Ethan Teng" }],
-  creator: "Ethan Teng",
+  title: { template: "%s | Ethan Teng", default: title },
+  description: SITE.description,
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
   metadataBase: new URL("https://ethanteng.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ethanteng.com",
-    siteName: "Ethan Teng Consulting",
-    title: "Ethan Teng Consulting — PLG Growth & Self-Serve Revenue",
-    description:
-      "Turn traction into self-serve revenue. Onboarding, activation, lifecycle, and growth systems that scale.",
+    siteName: SITE.name,
+    title,
+    description: SITE.description,
     images: [
       {
-        url: "/Ethan Teng Consulting logo.png",
-        width: 1200,
-        height: 630,
-        alt: "Ethan Teng Consulting",
+        url: "/ethan-illustration.png",
+        width: 1086,
+        height: 1448,
+        alt: "Illustrated portrait of Ethan Teng",
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Ethan Teng Consulting — PLG Growth & Self-Serve Revenue",
-    description:
-      "Turn traction into self-serve revenue. Onboarding, activation, lifecycle, and growth systems that scale.",
-    images: ["/Ethan Teng Consulting logo.png"],
+    card: "summary",
+    title,
+    description: SITE.description,
+    images: ["/ethan-illustration.png"],
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
         <Navbar />
-        <main className="min-h-screen">{children}</main>
+        <main id="main-content" tabIndex={-1} className="min-h-[65vh]">
+          {children}
+        </main>
         <Footer />
+        <ScrollReveals />
         <Analytics />
       </body>
     </html>
