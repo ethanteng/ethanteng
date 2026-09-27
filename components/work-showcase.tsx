@@ -29,12 +29,7 @@ export function WorkShowcase() {
               asklinc.com <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
-          <WebsitePreview
-            name="Ask Linc"
-            domain="asklinc.com"
-            src="/work/ask-linc-website.png"
-            height={1000}
-          />
+          <VideoPreview title="Ask Linc" videoId="GRBboPyuL5U" />
         </article>
         <article id={navi.id} className="project" data-reveal>
           <div className="project-copy">
@@ -93,12 +88,7 @@ export function WorkShowcase() {
               uncloud.life <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
-          <WebsitePreview
-            name="Uncloud"
-            domain="uncloud.life"
-            src="/work/uncloud-website.png"
-            height={1000}
-          />
+          <VideoPreview title="Uncloud teaser" videoId="oELh5dwlmHs" />
         </article>
       </div>
     </section>
@@ -134,6 +124,23 @@ function WebsitePreview({
           height={height}
           sizes="(max-width: 700px) calc(100vw - 5rem), (max-width: 1200px) 50vw, 560px"
           className="website-screenshot"
+        />
+      </div>
+    </figure>
+  );
+}
+
+function VideoPreview({ title, videoId }: { title: string; videoId: string }) {
+  return (
+    <figure className="project-visual">
+      <div className="video-preview">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0`}
+          title={title}
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         />
       </div>
     </figure>
