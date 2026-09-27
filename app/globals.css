@@ -420,6 +420,69 @@
   border: 0;
 }
 
+/* Ask Linc leads the section: a wider demo, larger type, and a primary CTA.
+   The other projects follow as a pair of compact, media-first cards. */
+.project-feature {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.3fr);
+  border-color: #d5deea;
+  box-shadow: 0 24px 48px -32px #17233340;
+}
+.project-feature .project-copy {
+  justify-content: center;
+}
+.project-feature h3 {
+  font-size: 3.25rem;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+.project-feature .project-summary {
+  font-size: 1.25rem;
+}
+.project-feature .project-detail {
+  font-size: 1.0625rem;
+}
+.project-feature .action-link {
+  margin-top: 2rem;
+}
+.project-feature .project-visual {
+  background: linear-gradient(160deg, #eaf0fc, #f4f6fa 70%);
+}
+.project-feature .video-preview {
+  box-shadow: 0 20px 44px -20px #17233359;
+}
+/* Subgrid rows keep both cards' media and titles aligned. */
+.project-secondary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  column-gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.project-compact {
+  grid-row: span 2;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  margin-top: 0;
+}
+.project-compact .project-copy {
+  padding: 2rem;
+}
+.project-compact .project-topline {
+  margin-bottom: 0.75rem;
+}
+.project-compact h3 {
+  font-size: 1.75rem;
+  letter-spacing: -0.04em;
+}
+.project-compact .project-summary {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.project-compact .project-detail {
+  font-size: 0.9375rem;
+}
+
 .approach-section {
   padding-block: 1rem 5rem;
 }
@@ -953,6 +1016,9 @@
   .project-copy {
     padding: 2rem;
   }
+  .project-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .principle-grid {
     gap: 1.5rem;
   }
@@ -1054,14 +1120,27 @@
   .project-visual {
     padding: 1.25rem;
   }
-  .project h3 {
-    font-size: 2.3rem;
+  .project-feature h3 {
+    font-size: 2.5rem;
   }
   .project-topline {
     margin-bottom: 1.2rem;
   }
   .project-summary {
     margin-top: 1.25rem;
+  }
+  .project-secondary {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    row-gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .project-compact {
+    grid-row: auto;
+    grid-template-rows: none;
+  }
+  .project-compact .project-copy {
+    padding: 1.75rem;
   }
   .principle-grid {
     grid-template-columns: 1fr;

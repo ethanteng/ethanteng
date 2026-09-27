@@ -10,7 +10,7 @@ export function WorkShowcase() {
         <div className="section-heading">
           <h2 id="work-heading">What I’m building</h2>
         </div>
-        <article id={linc.id} className="project" data-reveal>
+        <article id={linc.id} className="project project-feature" data-reveal>
           <div className="project-copy">
             <div className="project-topline">
               <span className="eyebrow subtle">Personal finance · AI</span>
@@ -25,71 +25,79 @@ export function WorkShowcase() {
               questions in plain language, and explore the decisions ahead. I
               own the product and the engineering behind it.
             </p>
-            <a href={linc.url} className="text-link">
-              asklinc.com <ArrowUpRight aria-hidden="true" />
+            <a href={linc.url} className="action-link">
+              Visit asklinc.com <ArrowUpRight aria-hidden="true" />
             </a>
           </div>
           <VideoPreview title="Ask Linc" videoId="GRBboPyuL5U" />
         </article>
-        <article id={navi.id} className="project" data-reveal>
-          <div className="project-copy">
-            <div className="project-topline">
-              <span className="eyebrow subtle">
-                Healthcare · Full-stack ownership
-              </span>
+        <div className="project-secondary">
+          <article id={navi.id} className="project project-compact" data-reveal>
+            <WebsitePreview
+              name="Navi Nurses"
+              domain="navinurses.com"
+              src="/work/navi-nurses-website.png"
+              height={760}
+            />
+            <div className="project-copy">
+              <div className="project-topline">
+                <span className="eyebrow subtle">
+                  Healthcare · Full-stack ownership
+                </span>
+              </div>
+              <h3>{navi.company}</h3>
+              <p className="project-role">{navi.role}</p>
+              <p className="project-summary">
+                The technology behind the work of care.
+              </p>
+              <p className="project-detail">
+                I own the full technical stack and production outcomes for
+                Navi’s healthcare staffing platform: .NET / XAF APIs, React web,
+                React Native mobile, chat, and Azure infrastructure.
+              </p>
+              <p className="project-detail">
+                I run CI/CD and orchestrate AI agents across delivery, staying
+                responsible for architecture, releases, and what happens in
+                production.
+              </p>
+              <a href={navi.url} className="text-link">
+                navinurses.com <ArrowUpRight aria-hidden="true" />
+              </a>
             </div>
-            <h3>{navi.company}</h3>
-            <p className="project-role">{navi.role}</p>
-            <p className="project-summary">
-              The technology behind the work of care.
-            </p>
-            <p className="project-detail">
-              I own the full technical stack and production outcomes for Navi’s
-              healthcare staffing platform: .NET / XAF APIs, React web, React
-              Native mobile, chat, and Azure infrastructure.
-            </p>
-            <p className="project-detail">
-              I run CI/CD and orchestrate AI agents across delivery, staying
-              responsible for architecture, releases, and what happens in
-              production.
-            </p>
-            <a href={navi.url} className="text-link">
-              navinurses.com <ArrowUpRight aria-hidden="true" />
-            </a>
-          </div>
-          <WebsitePreview
-            name="Navi Nurses"
-            domain="navinurses.com"
-            src="/work/navi-nurses-website.png"
-            height={760}
-          />
-        </article>
-        <article id={uncloud.id} className="project" data-reveal>
-          <div className="project-copy">
-            <div className="project-topline">
-              <span className="eyebrow subtle">
-                Native app · Personal cloud
-              </span>
+          </article>
+          <article
+            id={uncloud.id}
+            className="project project-compact"
+            data-reveal
+            data-reveal-delay={1}
+          >
+            <VideoPreview title="Uncloud teaser" videoId="oELh5dwlmHs" />
+            <div className="project-copy">
+              <div className="project-topline">
+                <span className="eyebrow subtle">
+                  Native app · Personal cloud
+                </span>
+              </div>
+              <h3>{uncloud.company}</h3>
+              <p className="project-role">{uncloud.role}</p>
+              <p className="project-summary">My first native App Store app.</p>
+              <p className="project-detail">
+                I’m building Uncloud to make a personal cloud practical for a
+                household. Files stay on your own storage, with separate
+                accounts, imports from local folders and Dropbox, and sync
+                across your computers.
+              </p>
+              <p className="project-detail">
+                I own the product and engineering: ASP.NET Core,
+                React/TypeScript, SQLite, and integrations for device sync and
+                remote access.
+              </p>
+              <a href={uncloud.url} className="text-link">
+                uncloud.life <ArrowUpRight aria-hidden="true" />
+              </a>
             </div>
-            <h3>{uncloud.company}</h3>
-            <p className="project-role">{uncloud.role}</p>
-            <p className="project-summary">My first native App Store app.</p>
-            <p className="project-detail">
-              I’m building Uncloud to make a personal cloud practical for a
-              household. Files stay on your own storage, with separate accounts,
-              imports from local folders and Dropbox, and sync across your
-              computers.
-            </p>
-            <p className="project-detail">
-              I own the product and engineering: ASP.NET Core, React/TypeScript,
-              SQLite, and integrations for device sync and remote access.
-            </p>
-            <a href={uncloud.url} className="text-link">
-              uncloud.life <ArrowUpRight aria-hidden="true" />
-            </a>
-          </div>
-          <VideoPreview title="Uncloud teaser" videoId="oELh5dwlmHs" />
-        </article>
+          </article>
+        </div>
       </div>
     </section>
   );
