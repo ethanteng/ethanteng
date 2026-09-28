@@ -1019,6 +1019,11 @@
   .project-feature {
     grid-template-columns: minmax(0, 1fr);
   }
+  /* Stacked, the demo leads like the compact cards; DOM order keeps the
+     heading first for assistive tech. */
+  .project-feature .project-visual {
+    order: -1;
+  }
   .principle-grid {
     gap: 1.5rem;
   }
