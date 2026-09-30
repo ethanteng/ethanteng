@@ -1,4 +1,4 @@
-# Ethan Teng
+[![Ethan Teng — Founder of Ask Linc. AI-powered personal finance.](.github/profile-banner.png)](https://ethanteng.com)
 
 Personal and business website for Ethan Teng: Founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, creator of Uncloud, and the person behind Ethan Teng Consulting LLC. The default homepage is personal: Ask Linc first, followed by Navi Nurses, Uncloud, and career background. A persistent Personal / Consulting switch opens the dedicated business side.
 
