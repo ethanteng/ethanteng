@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { BrandLinks } from "@/components/brand-icons";
 import { CURRENT_WORK } from "@/lib/experience";
 
 export function WorkShowcase() {
@@ -25,9 +26,18 @@ export function WorkShowcase() {
               questions in plain language, and explore the decisions ahead. I
               own the product and the engineering behind it.
             </p>
-            <a href={linc.url} className="action-link">
-              Visit asklinc.com <ArrowUpRight aria-hidden="true" />
-            </a>
+            <div className="project-links">
+              <a href={linc.url} className="action-link">
+                Visit asklinc.com <ArrowUpRight aria-hidden="true" />
+              </a>
+              {linc.social && (
+                <BrandLinks
+                  links={linc.social}
+                  owner={linc.company}
+                  className="brand-links"
+                />
+              )}
+            </div>
           </div>
           <VideoPreview title="Ask Linc" videoId="GRBboPyuL5U" />
         </article>
@@ -60,9 +70,11 @@ export function WorkShowcase() {
                 responsible for architecture, releases, and what happens in
                 production.
               </p>
-              <a href={navi.url} className="text-link">
-                navinurses.com <ArrowUpRight aria-hidden="true" />
-              </a>
+              <div className="project-links">
+                <a href={navi.url} className="text-link">
+                  navinurses.com <ArrowUpRight aria-hidden="true" />
+                </a>
+              </div>
             </div>
           </article>
           <article
@@ -92,9 +104,18 @@ export function WorkShowcase() {
                 React/TypeScript, SQLite, and integrations for device sync and
                 remote access.
               </p>
-              <a href={uncloud.url} className="text-link">
-                uncloud.life <ArrowUpRight aria-hidden="true" />
-              </a>
+              <div className="project-links">
+                <a href={uncloud.url} className="text-link">
+                  uncloud.life <ArrowUpRight aria-hidden="true" />
+                </a>
+                {uncloud.social && (
+                  <BrandLinks
+                    links={uncloud.social}
+                    owner={uncloud.company}
+                    className="brand-links"
+                  />
+                )}
+              </div>
             </div>
           </article>
         </div>

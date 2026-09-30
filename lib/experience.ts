@@ -6,6 +6,13 @@ export const CURRENT_WORK = [
     company: "Ask Linc",
     role: "Founder",
     url: "https://asklinc.com",
+    social: {
+      github: "https://github.com/ethanteng/finsight",
+      linkedin: "https://www.linkedin.com/company/asklinc",
+      x: "https://x.com/asklinc",
+      bluesky: "https://bsky.app/profile/asklinc.com",
+      facebook: "https://www.facebook.com/asklinc/",
+    },
     description:
       "An AI-powered personal finance product I built to help people understand their finances and make decisions with more context.",
     bullets: [
@@ -32,6 +39,10 @@ export const CURRENT_WORK = [
     company: "Uncloud",
     role: "Creator",
     url: "https://www.uncloud.life/",
+    social: {
+      github: "https://github.com/ethanteng/homebase",
+      youtube: "https://www.youtube.com/@Uncloud-life",
+    },
     description:
       "My first native App Store app: a local-first personal cloud that keeps household files on computers and storage people already own.",
     bullets: [

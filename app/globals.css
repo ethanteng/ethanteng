@@ -358,9 +358,44 @@
   color: var(--muted-foreground);
   margin-top: 0.75rem;
 }
-.project-copy .text-link {
+/* A project's site link, followed by its repo and social profiles. */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+}
+.project-compact .project-links {
+  width: 100%;
+  justify-content: space-between;
   margin-top: auto;
   padding-top: 1.5rem;
+}
+.brand-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.brand-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--muted-foreground);
+  transition:
+    color 160ms,
+    border-color 160ms;
+}
+.brand-links a:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.brand-links svg {
+  width: 18px;
+  height: 18px;
 }
 /* Real website captures sit in a restrained browser frame. The entire project
    shares the one-time scroll reveal, including its image. */
@@ -441,7 +476,7 @@
 .project-feature .project-detail {
   font-size: 1.0625rem;
 }
-.project-feature .action-link {
+.project-feature .project-links {
   margin-top: 2rem;
 }
 .project-feature .project-visual {
@@ -747,6 +782,7 @@
 .footer-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 1.5rem;
 }
 .footer-links a {
@@ -754,6 +790,21 @@
 }
 .footer-links a:hover {
   color: var(--primary);
+}
+/* The padding widens each icon's hit area; the matching negative margin keeps
+   the glyphs aligned with the text links. */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+.footer-social a {
+  display: flex;
+  padding: 0.5rem;
+  margin: -0.5rem;
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* Secondary pages use the same grid, rather than a separate visual template. */

@@ -5,7 +5,7 @@ export const SITE = {
   description: 'Founder of Ask Linc, an AI-powered personal finance product. Engineering Lead / Founding Engineer at Navi Nurses and creator of Uncloud, my first native App Store app.',
   email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
-  social: { linkedin: 'https://www.linkedin.com/in/ethanteng', github: 'https://github.com/ethanteng' },
+  social: { github: 'https://github.com/ethanteng', linkedin: 'https://www.linkedin.com/in/ethanteng' },
   calendly: 'https://calendly.com/ethanteng-sf/plg',
   cta: { primary: '/contact', secondary: '/#work' }
 };
