@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { BrandLinks } from "@/components/brand-icons";
+import { GitHubActivity } from "@/components/github-activity";
 import { CURRENT_WORK } from "@/lib/experience";
 
 export function WorkShowcase() {
@@ -11,6 +12,7 @@ export function WorkShowcase() {
         <div className="section-heading">
           <h2 id="work-heading">What I’m building</h2>
         </div>
+        <GitHubActivity />
         <article id={linc.id} className="project project-feature" data-reveal>
           <div className="project-copy">
             <div className="project-topline">

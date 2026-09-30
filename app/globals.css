@@ -310,6 +310,91 @@
 .section-heading .eyebrow {
   color: var(--muted-foreground);
 }
+/* GitHub contribution graph, in GitHub's own light-mode greens. */
+.github-activity {
+  --contrib-0: #eff2f5;
+  --contrib-1: #aceebb;
+  --contrib-2: #4ac26b;
+  --contrib-3: #2da44e;
+  --contrib-4: #116329;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+}
+.github-activity-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.github-activity-header p {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+}
+.github-activity-header p svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--foreground);
+}
+.github-activity-header strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+/* Bottom padding keeps a horizontal scrollbar off the last row. */
+.contrib-scroll {
+  overflow-x: auto;
+  direction: rtl;
+  padding-bottom: 0.5rem;
+}
+.contrib-graph {
+  direction: ltr;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(10px, 1fr);
+  column-gap: 3px;
+  width: max-content;
+  min-width: 100%;
+}
+.contrib-week {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+/* Zero width lets a label overflow into the next columns without sizing them. */
+.contrib-month {
+  width: 0;
+  height: 1.25rem;
+  white-space: nowrap;
+  font-size: 0.6875rem;
+  color: var(--muted-foreground);
+}
+.contrib-day {
+  aspect-ratio: 1;
+  border-radius: 20%;
+  background: var(--contrib-0);
+}
+.contrib-day[data-level="1"] {
+  background: var(--contrib-1);
+}
+.contrib-day[data-level="2"] {
+  background: var(--contrib-2);
+}
+.contrib-day[data-level="3"] {
+  background: var(--contrib-3);
+}
+.contrib-day[data-level="4"] {
+  background: var(--contrib-4);
+}
+.contrib-pad {
+  visibility: hidden;
+}
 .project {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
@@ -1173,6 +1258,9 @@
   }
   .project {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .github-activity {
+    padding: 1.25rem;
   }
   .project-copy {
     padding: 1.75rem;
