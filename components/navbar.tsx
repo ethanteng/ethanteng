@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu } from "lucide-react";
+import { BrandMark } from "@/components/brand-mark";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -30,7 +30,7 @@ export function Navbar() {
           className="wordmark"
           aria-label={`${consulting ? "Ethan Teng Consulting" : "Ethan Teng"} — Home`}
         >
-          <Image src="/icon.svg" alt="" width={25} height={25} />
+          <BrandMark />
           Ethan Teng
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
