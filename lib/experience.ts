@@ -12,6 +12,7 @@ export const CURRENT_WORK = [
       x: "https://x.com/asklinc",
       bluesky: "https://bsky.app/profile/asklinc.com",
       facebook: "https://www.facebook.com/asklinc/",
+      youtube: "https://www.youtube.com/@asklinc",
     },
     description:
       "An AI-powered personal finance product I built to help people understand their finances and make decisions with more context.",

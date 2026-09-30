@@ -39,7 +39,7 @@ export function WorkShowcase() {
               )}
             </div>
           </div>
-          <VideoPreview title="Ask Linc" videoId="GRBboPyuL5U" />
+          <VideoPreview title="Ask Linc" videoId="iQ2AGix4q8Q" />
         </article>
         <div className="project-secondary">
           <article id={navi.id} className="project project-compact" data-reveal>

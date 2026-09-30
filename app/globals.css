@@ -364,24 +364,28 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem 1.5rem;
+  width: 100%;
 }
 .project-compact .project-links {
-  width: 100%;
   justify-content: space-between;
   margin-top: auto;
   padding-top: 1.5rem;
 }
+/* Buttons are 44px squares, shrinking together to stay on one row. */
 .brand-links {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
+  min-width: 0;
+}
+.brand-links li {
+  width: 44px;
+  min-width: 0;
 }
 .brand-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  aspect-ratio: 1;
   border: 1px solid var(--border);
   border-radius: 4px;
   color: var(--muted-foreground);
