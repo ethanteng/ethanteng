@@ -21,12 +21,13 @@ export function WorkShowcase() {
             <h3>{linc.company}</h3>
             <p className="project-role">{linc.role}</p>
             <p className="project-summary">
-              Personal finance, built around your questions.
+              Financial AI with a strict no-BS math policy.
             </p>
             <p className="project-detail">
-              I built Ask Linc to help people connect their finances, ask
-              questions in plain language, and explore the decisions ahead. I
-              own the product and the engineering behind it.
+              I built Ask Linc to help people connect their finances, explore
+              different scenarios, and get answers they can trust by seeing the
+              data, calculations, and reasoning behind them. I own the product
+              and the engineering behind it.
             </p>
             <div className="project-links">
               <a href={linc.url} className="action-link">
