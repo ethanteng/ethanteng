@@ -44,6 +44,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          defer
+          src="https://clicks.page/t.js"
+          data-site="5i4z4m2v232t"
+        ></script>
+      </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <a className="skip-link" href="#main-content">
           Skip to content
