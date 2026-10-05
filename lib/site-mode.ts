@@ -17,6 +17,7 @@ export const MODE_NAVIGATION = {
   personal: [
     { name: "Work", href: "/#work" },
     { name: "About", href: "/about" },
+    { name: "Astrophotography", href: "https://www.queerastro.space/" },
     { name: "Contact", href: "/contact" },
   ],
   consulting: [
