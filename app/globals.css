@@ -446,7 +446,7 @@
   color: var(--muted-foreground);
   margin-top: 0.75rem;
 }
-/* A project's site link, followed by its repo and social profiles. */
+/* A project's site link, followed by its repo. */
 .project-links {
   display: flex;
   flex-wrap: wrap;
@@ -568,8 +568,10 @@
 .project-feature .project-detail {
   font-size: 1.0625rem;
 }
+/* The repo button pairs with the CTA, on one row even at the narrowest column. */
 .project-feature .project-links {
   margin-top: 2rem;
+  column-gap: 0.5rem;
 }
 .project-feature .project-visual {
   background: linear-gradient(160deg, #eaf0fc, #f4f6fa 70%);
