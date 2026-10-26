@@ -1,8 +1,8 @@
 export const SITE = {
   name: 'Ethan Teng',
   company: 'Ethan Teng Consulting LLC',
-  title: 'Ask Linc Founder & Engineering Lead',
-  description: 'Founder of Ask Linc, an AI-powered personal finance product. Engineering Lead / Founding Engineer at Navi Nurses and creator of Uncloud, my first native App Store app.',
+  title: 'HelloPorch Founder & Builder',
+  description: 'Founder and builder of HelloPorch, one-button video calling for families, plus Ask Linc and Uncloud. Engineering Lead / Founding Engineer at Navi Nurses.',
   email: 'ethan@ethanteng.com',
   phone: '415-867-6937',
   social: { github: 'https://github.com/ethanteng', linkedin: 'https://www.linkedin.com/in/ethanteng' },
@@ -262,7 +262,7 @@ export const CASE_STUDIES = [
 ];
 
 export const ABOUT = {
-  bio: `I’m the founder of Ask Linc and the Engineering Lead / Founding Engineer at Navi Nurses. I build products, own the technical stack, and stay responsible for what happens in production. Before this, I led product and growth work at meez, Postman, Recurly, and Braintree/PayPal. I studied computer science at Stanford.`,
+  bio: `I’m the founder and builder of HelloPorch, Ask Linc, and Uncloud, and the Engineering Lead / Founding Engineer at Navi Nurses. I build products, own the technical stack, and stay responsible for what happens in production. Before this, I led product and growth work at meez, Postman, Recurly, and Braintree/PayPal. I studied computer science at Stanford.`,
   bestAt: [
     'Designing onboarding flows that convert signups into activated users',
     'Building behavioral segmentation and lifecycle campaigns',
@@ -286,7 +286,7 @@ export const CLIENT_PORTFOLIO = [
     id: 'navinurses',
     name: 'Navi Nurses',
     industry: 'Healthcare',
-    description: 'Engineering Lead / Founding Engineer for the healthcare staffing platform behind Navi Nurses. I own the full technical stack and production outcomes across APIs, web, mobile, chat, and cloud infrastructure.',
+    description: 'Navi Nurses provides private duty nursing and caregiving at home in the Phoenix area. As Engineering Lead / Founding Engineer, I own the supporting platform and production outcomes across APIs, web, mobile, chat, and cloud infrastructure.',
     image: '/navinurses.png',
     features: [
       'Patient Management',

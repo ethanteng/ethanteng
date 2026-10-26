@@ -547,8 +547,8 @@
   border: 0;
 }
 
-/* Ask Linc leads the section: a wider demo, larger type, and a primary CTA.
-   The other projects follow as a pair of compact, media-first cards. */
+/* HelloPorch leads with larger type and a primary CTA.
+   The other three projects follow as compact, media-first cards. */
 .project-feature {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.3fr);
   border-color: #d5deea;
@@ -582,7 +582,7 @@
 /* Subgrid rows keep both cards' media and titles aligned. */
 .project-secondary {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: auto auto;
   column-gap: 1.5rem;
   margin-top: 1.5rem;
@@ -1168,6 +1168,15 @@
      heading first for assistive tech. */
   .project-feature .project-visual {
     order: -1;
+  }
+  .project-secondary {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    row-gap: 1.5rem;
+  }
+  .project-compact {
+    grid-row: auto;
+    grid-template-rows: none;
   }
   .principle-grid {
     gap: 1.5rem;
