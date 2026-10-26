@@ -1,20 +1,64 @@
 // Current roles are undated until start dates are supplied. Prior dates and
 // achievements are retained from the existing resume and case studies.
+// Product messaging checked against each official website on October 26, 2026.
+// Contribution details retain the existing resume scope and supplied role titles.
 export const CURRENT_WORK = [
+  {
+    id: "helloporch",
+    company: "HelloPorch",
+    role: "Founder / Builder",
+    url: "https://helloporch.store",
+    category: "Accessible communication",
+    summary: "One-button video calling for staying close to family.",
+    social: {
+      github: "https://github.com/ethanteng/helloporch",
+    },
+    description:
+      "A tablet and large-button keypad for people with dementia, Parkinson’s, or limited dexterity. Each button represents a loved one; one press starts a video call. Early units are in development, with a waitlist open.",
+    contribution:
+      "I’m the founder and builder, shaping the product and building the experience from the keypad to the family video call.",
+    bullets: [
+      "Founded HelloPorch to make family video calls simpler for people with dementia, Parkinson’s, or limited dexterity.",
+      "Own product development across the tablet, large-button keypad, and family calling experience.",
+    ],
+  },
   {
     id: "ask-linc",
     company: "Ask Linc",
-    role: "Founder",
+    role: "Founder / Builder",
     url: "https://asklinc.com",
+    category: "Financial planning · AI",
+    summary: "Ask a financial question. Explore the plan behind the answer.",
     social: {
       github: "https://github.com/ethanteng/finsight",
     },
     description:
-      "An AI-powered personal finance product I built to help people understand their finances and make decisions with more context.",
+      "AI financial planning that brings connected accounts and personal questions together. Linc runs the numbers, compares what-if scenarios, and shows the inputs, assumptions, calculations, and sources behind a plan.",
+    contribution:
+      "I founded and built Ask Linc, owning the product and engineering from account connections to the conversational planning experience.",
     bullets: [
-      "Own the product and engineering, from the initial idea to the working experience.",
-      "Bring financial accounts, questions, and planning into one conversational product.",
-      "Help people explore scenarios and understand the assumptions behind the numbers.",
+      "Own product and engineering for a conversational financial planning product.",
+      "Bring account data, scenario analysis, and explainable calculations into one experience.",
+    ],
+  },
+  {
+    id: "uncloud",
+    company: "Uncloud",
+    role: "Founder / Builder",
+    url: "https://www.uncloud.life/",
+    category: "Personal cloud · Early access",
+    summary: "Cloud storage on a computer you already own.",
+    social: {
+      github: "https://github.com/ethanteng/homebase",
+    },
+    description:
+      "A personal cloud for households that want to move files off subscription storage and onto their own hardware. Separate accounts, file migration, and remote access bring cloud convenience to storage they control. Available for early-access reservations.",
+    contribution:
+      "I founded Uncloud and build the product: ASP.NET Core, React/TypeScript, SQLite, and integrations for file migration, device sync, and remote access.",
+    bullets: [
+      "Own product and engineering for a household personal cloud on existing hardware.",
+      "Build with ASP.NET Core, React/TypeScript, and SQLite, including separate accounts and file imports.",
+      "Integrate Syncthing for device sync and an optional Tailscale-based tunnel for remote access.",
     ],
   },
   {
@@ -22,29 +66,16 @@ export const CURRENT_WORK = [
     company: "Navi Nurses",
     role: "Engineering Lead / Founding Engineer",
     url: "https://navinurses.com",
+    category: "In-home nursing & caregiving",
+    summary: "The technology supporting nurse-led care at home.",
     description:
-      "I own the full technical stack and production outcomes for a healthcare staffing platform supporting the work of nurses and care teams.",
+      "Navi Nurses provides private duty nursing and caregiving at home in the Phoenix area. Its team builds care around each person, from post-surgery recovery and complex medical needs to everyday assistance.",
+    contribution:
+      "As Engineering Lead / Founding Engineer, I own the platform behind care delivery: APIs, web and mobile apps, chat, infrastructure, releases, and production reliability.",
     bullets: [
-      "Own .NET / XAF APIs, the React web application, React Native mobile applications, and chat.",
+      "Own .NET / XAF APIs, React web, React Native mobile applications, and chat for the platform supporting care teams.",
       "Run Azure infrastructure and CI/CD, with responsibility for releases and production reliability.",
-      "Orchestrate AI agents across delivery, while retaining ownership of architecture, review, and production outcomes.",
-    ],
-  },
-  {
-    id: "uncloud",
-    company: "Uncloud",
-    role: "Creator",
-    url: "https://www.uncloud.life/",
-    social: {
-      github: "https://github.com/ethanteng/homebase",
-    },
-    description:
-      "My first native App Store app: a local-first personal cloud that keeps household files on computers and storage people already own.",
-    bullets: [
-      "Build my first native App Store app around a local-first personal cloud.",
-      "Build the product with ASP.NET Core, React/TypeScript, and SQLite.",
-      "Support separate household accounts, file browsing, and imports from local folders and Dropbox.",
-      "Integrate Syncthing for device sync and an optional Tailscale-based tunnel for remote access.",
+      "Orchestrate AI agents across delivery, retaining ownership of architecture, review, and production outcomes.",
     ],
   },
 ];

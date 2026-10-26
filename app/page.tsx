@@ -8,9 +8,9 @@ export default function HomePage() {
       <section className="wrap hero" aria-labelledby="hero-heading">
         <p className="eyebrow">Ethan Teng</p>
         <h1 id="hero-heading">
-          Founder of <span>Ask Linc.</span>
+          Founder of <span>HelloPorch.</span>
         </h1>
-        <p className="hero-tagline">AI-powered personal finance.</p>
+        <p className="hero-tagline">One-button video calling. Closer to family.</p>
         <Image
           src="/ethan-illustration.png"
           alt="Illustrated portrait of Ethan Teng"

@@ -7,7 +7,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Ethan Teng’s experience as Founder of Ask Linc, Engineering Lead / Founding Engineer at Navi Nurses, and creator of Uncloud, plus product and growth leadership.",
+    "Ethan Teng’s experience as founder and builder of HelloPorch, Ask Linc, and Uncloud, Engineering Lead / Founding Engineer at Navi Nurses, and product and growth leader.",
 };
 
 export default function ResumePage() {

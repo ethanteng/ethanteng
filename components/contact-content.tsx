@@ -18,7 +18,7 @@ export function ContactContent({
       >
         {consulting
           ? "Tell me about your product, the problem you’re working through, and where you could use help."
-          : "Have a question about Ask Linc, my work, or an idea you’d like to share? Send me a note."}
+          : "Have a question about HelloPorch, my other projects, or an idea you’d like to share? Send me a note."}
       </PageIntro>
       {consulting && <ConsultingNav current="/services/contact" />}
       <section className="wrap content-section contact-grid">

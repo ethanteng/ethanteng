@@ -9,7 +9,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Ethan Teng: founder of Ask Linc, Engineering Lead at Navi Nurses, creator of Uncloud, and the person behind Ethan Teng Consulting LLC.",
+    "Ethan Teng: founder and builder of HelloPorch, Ask Linc, and Uncloud; Engineering Lead / Founding Engineer at Navi Nurses; and the person behind Ethan Teng Consulting LLC.",
 };
 
 export default function AboutPage() {
@@ -38,10 +38,12 @@ export default function AboutPage() {
         <div className="about-copy">
           <h2>I like being close to the work.</h2>
           <p>
-            I’m Ethan, founder of Ask Linc, an AI-powered personal finance
-            product I built. I’m also the Engineering Lead / Founding Engineer
-            at Navi Nurses, and I’m building Uncloud, a personal cloud and my
-            first native App Store app.
+            I’m Ethan, founder and builder of HelloPorch, a simpler way for
+            people with dementia, Parkinson’s, or limited dexterity to video
+            call family. I also founded and built Ask Linc for financial
+            planning and Uncloud for personal cloud storage. At Navi Nurses,
+            I’m the Engineering Lead / Founding Engineer, building the
+            technology that supports nursing and caregiving at home.
           </p>
           <p>
             My work spans the full stack: product decisions, APIs, web and

@@ -66,7 +66,7 @@ export function Navbar() {
             <SheetDescription>
               {consulting
                 ? "Product, engineering, and growth"
-                : "Founder of Ask Linc"}
+                : "Founder of HelloPorch"}
             </SheetDescription>
             <nav className="mobile-nav" aria-label="Mobile navigation">
               {navigation.map((item) => (
